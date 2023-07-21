@@ -21,7 +21,7 @@
       seconds: Math.floor((difference / 1000) % 60)
     }
     function conFormat(n) {
-      if (n > 10) {
+      if (n >= 10) {
         return n.toString()
       } else {
         return `0${n}`
