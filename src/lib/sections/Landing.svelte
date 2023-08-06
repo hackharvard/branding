@@ -49,7 +49,7 @@
     <div class="flex items-center justify-center">
       <div class="w-60 max-w-xl lg:w-full">
         <img
-          src={'images/rocket' + ($theme == 'dark' ? '-dark' : '-light') + '.svg'}
+          src={'images/rocket' + ($theme == 'dark' ? '-dark' : '-light') + '.png'}
           alt=""
           class="turbulence h-full w-full object-cover"
         />
