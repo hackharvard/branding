@@ -102,7 +102,11 @@
         </div>
 
         <div class="mt-3">
-          <a class="link text-2xl font-bold" href="/wtf" target="_blank">wtf is a hackathon?!</a>
+          <a
+            class="link color: text-2xl font-bold sm:text-2xl md:text-3xl lg:text-3xl"
+            href="https://dayof.hackharvard.io/"
+            target="_blank">DAY-OF INFO!!</a
+          >
         </div>
       </div>
     </div>
