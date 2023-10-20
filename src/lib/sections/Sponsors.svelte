@@ -88,6 +88,17 @@
       </a>
 
       <a
+        href="https://www.thecoop.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dark:rounded-2xl dark:bg-white sm:p-4 md:p-8 lg:p-12"
+      >
+        <div class="flex h-full items-center">
+          <img src="images/sponsors/coop.png" alt="coop" />
+        </div>
+      </a>
+
+      <a
         href="https://www.tensordock.com/"
         target="_blank"
         rel="noopener noreferrer"
