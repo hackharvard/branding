@@ -53,7 +53,10 @@
     <!-- <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 lg:grid-cols-4"> -->
     <div>
       {#each speakers as speaker}
-        <Modal class="overflow-hidden rounded-md transition-transform hover:scale-[1.05]" {speaker}>
+        <Modal
+          class="overflow-hidden rounded-md px-2 transition-transform hover:scale-[1.05]"
+          {speaker}
+        >
           <div class="sm:h-64 sm:w-64">
             <img class="h-full w-full object-cover" src={speaker.img} alt={speaker.name} />
           </div>
