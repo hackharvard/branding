@@ -44,10 +44,12 @@ export default {
       },
       backgroundImage: {
         'welcome-dark': "url('/images/sections/welcome-dark.jpg')",
-        'welcome-light': "url('/images/sections/welcome-light.svg')",
-        'faq': "url('/images/sections/faq.svg')",
-        'applications-light': "url('/images/sections/applications-light.svg')",
-        'applications-dark': "url('/images/sections/applications-dark.svg')"
+        /* Seems like we're not using this 
+          'welcome-light': "url('/images/sections/welcome-light.jpg')",
+        */
+        'faq': "url('/images/sections/faq.png')",
+        'applications-light': "url('/images/sections/applications-light.png')",
+        'applications-dark': "url('/images/sections/applications-dark.png')"
       }
     }
   },
