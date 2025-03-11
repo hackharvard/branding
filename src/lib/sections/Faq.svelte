@@ -27,14 +27,14 @@
               together students from around the world to collaborate and create innovative projects
               related to hardware, software, computer coding, and more. Learn more <a
                 class="link"
-                href="/wtf"
+                href="/what"
                 target="_blank">here</a
               >.
             </svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">When is HackHarvard?</svelte:fragment>
-            <svelte:fragment slot="content">From October 20 - October 22, 2023</svelte:fragment>
+            <svelte:fragment slot="content">October 2025. Exact date TBD.</svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">How much does HackHarvard cost?</svelte:fragment>
@@ -101,8 +101,7 @@
           <Disclosure>
             <svelte:fragment slot="title">When is the application deadline?</svelte:fragment>
             <svelte:fragment slot="content">
-              The early application deadline is September 4th, 2023. The regular application
-              deadline is September 25th, 2023.
+              Deadlines are TBD.
             </svelte:fragment>
           </Disclosure>
           <Disclosure>

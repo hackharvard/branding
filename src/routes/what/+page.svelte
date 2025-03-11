@@ -1,8 +1,8 @@
 <script>
-  import Wtf from '$lib/sections/Wtf.svelte'
+  import What from '$lib/sections/What.svelte'
   import '../../app.css'
 </script>
 
 <main>
-  <Wtf />
+  <What />
 </main>

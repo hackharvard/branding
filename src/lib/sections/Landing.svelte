@@ -64,20 +64,10 @@
           >
             HackHarvard
           </p>
-          <p class="mt-5 text-center font-exo text-2xl text-white">
-            <span class="mr-1 text-white"> Powered by </span>
-            <a href="https://tryterra.co/" target="_blank" rel="noopener noreferrer">
-              <img
-                class="inline-block w-3/12 rounded-lg bg-white object-cover"
-                src="images/sponsors/terra_api.png"
-                alt="TerraAPI"
-              />
-            </a>
-          </p>
-          <p class="mt-10 text-center font-exo text-4xl text-white">October 20-22, 2023</p>
+          <p class="mt-10 text-center font-exo text-4xl text-white">October 2025</p>
         </div>
 
-        <!-- Countdown  -->
+        <!-- Countdown 
         <div class="mt-10 flex items-center justify-center">
           <div
             class="flex w-min gap-4 text-center font-exo text-[5vw] font-bold text-white sm:text-2xl md:text-3xl lg:text-3xl"
@@ -99,10 +89,10 @@
               <div>SECONDS</div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="mt-3">
-          <a class="link text-2xl font-bold" href="/wtf" target="_blank">wtf is a hackathon?!</a>
+          <a class="link text-2xl font-bold" href="/what" target="_blank">What is a hackathon?</a>
         </div>
       </div>
     </div>

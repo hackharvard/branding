@@ -40,7 +40,7 @@
     <Landing />
     <Welcome />
     <Tracks />
-    <Applications />
+    <!-- <Applications /> -->
     <Faq />
     <Hype />
     <Speakers />

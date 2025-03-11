@@ -1,6 +1,6 @@
 <div class="min-h-screen bg-secondary p-8 text-white">
   <div class="mx-auto max-w-4xl">
-    <h1 class="mb-4 font-exo text-5xl font-bold sm:text-7xl">wtf is a hackathon?!</h1>
+    <h1 class="mb-4 font-exo text-5xl font-bold sm:text-7xl">What is a hackathon?</h1>
 
     <p class="mb-6 text-lg">
       Welcome to the exciting world of hackathons! A hackathon is a creative, fast-paced event where
