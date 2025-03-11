@@ -70,21 +70,21 @@
           <Disclosure>
             <svelte:fragment slot="title">When will applications open?</svelte:fragment>
             <svelte:fragment slot="content">
-              Applications for HackHarvard China will open in around June 2025. Stay tuned for updates!
+              Applications for HackHarvard China will open soon. Stay tuned for updates!
             </svelte:fragment>
           </Disclosure>
-          <Disclosure>
+          <!-- <Disclosure>
             <svelte:fragment slot="title">Who is eligible to apply?</svelte:fragment>
             <svelte:fragment slot="content">
               All university students in China are welcome to apply, regardless of coding experience. International students studying in China are also eligible to apply.
             </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
+          </Disclosure> -->
+          <!-- <Disclosure>
             <svelte:fragment slot="title">Will there be travel reimbursements?</svelte:fragment>
             <svelte:fragment slot="content">
               We're working with our sponsors to provide travel reimbursements for participants. More details will be provided after acceptance.
             </svelte:fragment>
-          </Disclosure>
+          </Disclosure> -->
         </div>
         <div class="space-y-6">
           <h3 class="font-exo text-3xl text-red-500 sm:text-4xl md:text-5xl">TEAMS</h3>
@@ -100,7 +100,7 @@
             <svelte:fragment slot="title">How do teams work?</svelte:fragment>
             <svelte:fragment slot="content">
               Each team consists of a maximum of four members. However, all teammates must submit
-              individual applications and all applications will be evaluated individually,
+              individual applications to HackHarvard China and all applications will be evaluated individually,
               regardless of your intended team.
             </svelte:fragment>
           </Disclosure>
@@ -115,16 +115,16 @@
               Yes! We will be giving away swag to all participants who submit a project, as well as exciting prizes to all winning projects.
             </svelte:fragment>
           </Disclosure>
-          <Disclosure>
+          <!-- <Disclosure>
             <svelte:fragment slot="title">What resources will be provided?</svelte:fragment>
             <svelte:fragment slot="content">
               HackHarvard China will provide food, drinks, and a comfortable space to work. You'll also have access to mentors, workshops, and networking opportunities with industry professionals.
             </svelte:fragment>
-          </Disclosure>
+          </Disclosure> -->
           <Disclosure>
             <svelte:fragment slot="title">Is there a code of conduct?</svelte:fragment>
             <svelte:fragment slot="content">
-              All participants are expected to follow the HackHarvard Code of Conduct throughout the duration of the event. This ensures a safe, respectful, and inclusive environment for everyone.
+              All participants are expected to follow the HackHarvard Code of Conduct throughout the duration of the event. This ensures a safe, respectful, and inclusive environment for everyone. A PDF of this code of conduct will be made available soon.
             </svelte:fragment>
           </Disclosure>
         </div>

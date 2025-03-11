@@ -18,9 +18,9 @@
         A collaborative hackathon between HackHarvard and Guangzhou Hezong Lianheng Cultural Exchange, bringing the spirit of innovation to students in China.
       </p>
 
-      <div class="overflow-hidden rounded-lg shadow-lg">
+      <!-- <div class="overflow-hidden rounded-lg shadow-lg">
         <img src="/images/china-banner.jpg" alt="HackHarvard China" class="w-full" onerror="this.src='/images/2022/code.jpg'" />
-      </div>
+      </div> -->
     </section>
 
     <!-- About Section -->
@@ -49,7 +49,7 @@
         
         <div class="overflow-hidden rounded-lg bg-gray-800 p-6 shadow-lg">
           <h3 class="mb-3 font-exo text-xl font-bold text-purple-400">Format</h3>
-          <p>In-person event with virtual mentorship opportunities</p>
+          <p>In-person event!</p>
         </div>
       </div>
     </section>
