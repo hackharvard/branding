@@ -2,24 +2,24 @@
   import Disclosure from '../components/Disclosure.svelte'
 </script>
 
-<div class="bg-purple-100 dark:bg-secondary">
+<div class="bg-white dark:bg-gray-900">
   <div class="p-dynamic bg-color flex justify-center bg-faq bg-cover" id="faq">
     <div class="w-full max-w-3xl rounded-lg bg-white p-8 shadow-lg dark:bg-black">
       <div>
-        <h1 class="font-exo text-5xl uppercase text-red-700 sm:text-7xl">FAQ</h1>
-        <p class="mt-5 font-bold text-blue-700 dark:text-blue-200">
+        <h1 class="font-exo text-4xl uppercase text-red-700 sm:text-5xl">FAQ</h1>
+        <p class="mt-5 text-sm font-bold text-blue-700 dark:text-blue-200">
           What if my question is not here?
         </p>
-        <p>
+        <p class="text-sm">
           Please email us at <a class="link" href="mailto:team@hackharvard.io"
             >team@hackharvard.io</a
           >
           and we'll get back to you ASAP!
         </p>
       </div>
-      <div class="mt-8 space-y-8">
-        <div class="space-y-6">
-          <h3 class="font-exo text-3xl text-red-700 sm:text-4xl md:text-5xl">GENERAL</h3>
+      <div class="mt-8 space-y-6">
+        <div class="space-y-4">
+          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl">GENERAL</h3>
           <Disclosure>
             <svelte:fragment slot="title">What is HackHarvard?</svelte:fragment>
             <svelte:fragment slot="content">
@@ -96,8 +96,8 @@
             </svelte:fragment>
           </Disclosure>
         </div>
-        <div class="space-y-6">
-          <h3 class="font-exo text-3xl text-red-700 sm:text-4xl md:text-5xl">APPLY</h3>
+        <div class="space-y-4">
+          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl">APPLY</h3>
           <Disclosure>
             <svelte:fragment slot="title">When is the application deadline?</svelte:fragment>
             <svelte:fragment slot="content">
@@ -113,8 +113,8 @@
             </svelte:fragment>
           </Disclosure>
         </div>
-        <div class="space-y-6">
-          <h3 class="font-exo text-3xl text-red-700 sm:text-4xl md:text-5xl">TEAMS</h3>
+        <div class="space-y-4">
+          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl">TEAMS</h3>
           <Disclosure>
             <svelte:fragment slot="title">What if I don't have a team?</svelte:fragment>
             <svelte:fragment slot="content">
@@ -132,8 +132,8 @@
             </svelte:fragment>
           </Disclosure>
         </div>
-        <div class="space-y-6">
-          <h3 class="font-exo text-3xl uppercase text-red-700 sm:text-4xl md:text-5xl">
+        <div class="space-y-4">
+          <h3 class="font-exo text-2xl uppercase text-red-700 sm:text-3xl">
             Hackathon
           </h3>
           <Disclosure>

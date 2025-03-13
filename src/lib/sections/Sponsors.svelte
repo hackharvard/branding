@@ -1,4 +1,4 @@
-<div class="py-dynamic bg-purple-100 dark:bg-secondary" id="sponsors">
+<div class="py-dynamic bg-white dark:bg-gray-900" id="sponsors">
   <h1 class="text-center font-exo text-5xl font-bold uppercase sm:text-7xl">Sponsors</h1>
 
   <div class="mb-5 mt-5 flex items-center justify-center">

@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply scroll-smooth bg-primary font-lato text-secondary antialiased dark:bg-secondary dark:text-primary;
+    @apply scroll-smooth bg-primary font-lato text-secondary antialiased dark:bg-gray-900 dark:text-primary;
   }
 }
 

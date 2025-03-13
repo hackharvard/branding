@@ -1,144 +1,91 @@
 <script>
-  import { onMount, onDestroy } from 'svelte'
-  import { theme } from '$lib/stores'
-  import { format } from 'date-fns'
-  import Marquee from '../components/Marquee.svelte'
-
-  // Countdown
-  let countdown
-  let remainingTime = { months: 0, days: 0, hours: 0, minutes: 0 }
-  const targetDate = new Date('2023-10-21T00:00:00Z').getTime()
-  // const fmtdDate = format(new Date('2023-10-14T00:00:00Z'), 'MMM d, yyyy')
-  function updateCountdown() {
-    const now = new Date().getTime()
-    const difference = targetDate - now
-    const tmp = {
-      // months: Math.floor(difference / (1000 * 60 * 60 * 24 * 30)),
-      // days: Math.floor((difference / (1000 * 60 * 60 * 24)) % 30),
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / (1000 * 60)) % 60),
-      seconds: Math.floor((difference / 1000) % 60)
-    }
-    function conFormat(n) {
-      if (n > 10) {
-        return n.toString()
-      } else {
-        return `0${n}`
-      }
-    }
-    remainingTime = {
-      days: conFormat(tmp.days),
-      hours: conFormat(tmp.hours),
-      minutes: conFormat(tmp.minutes),
-      seconds: conFormat(tmp.seconds)
-    }
-  }
-  updateCountdown()
-
-  onMount(() => {
-    countdown = setInterval(updateCountdown, 1000)
-  })
-  onDestroy(() => {
-    clearInterval(countdown)
-  })
+  import Marquee from '../components/Marquee.svelte';
+  
+  // For parallax scrolling effect
+  let scrollY;
+  
+  // Featured image path based on theme
+  $: featuredImagePath = '/nice_photos/Copy of 6S1A2936.jpg';
 </script>
 
-<div class="bg-landing-light dark:bg-landing-dark min-h-screen" id="home">
-  <div class="px-dynamic grow pb-8 pt-5 lg:grid lg:grid-cols-2">
-    <div class="flex items-center justify-center">
-      <div class="w-60 max-w-xl lg:w-full">
-        <img
-          src={'images/rocket' + ($theme == 'dark' ? '-dark' : '-light') + '.svg'}
-          alt=""
-          class="turbulence h-full w-full object-cover"
-        />
+<svelte:window bind:scrollY />
+
+<div class="relative min-h-screen overflow-hidden" id="home">
+  <!-- Parallax Hero Background -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden">
+    <img 
+      src={featuredImagePath} 
+      alt="HackHarvard" 
+      class="absolute w-full h-full object-cover object-center transform scale-125 transition-transform duration-500"
+      style="transform: translateY({scrollY * 0.15}px) scale(1.25);"
+    />
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  </div>
+  
+  <!-- Hero Content -->
+  <div class="relative flex flex-col justify-center items-center h-screen px-4 sm:px-6 py-10 sm:py-20 text-white">
+    <div class="text-center max-w-6xl mx-auto" style="transform: translateY({-scrollY * 0.08}px);">
+      <h1 class="font-lexend text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 tracking-tighter drop-shadow-lg">
+        HackHarvard
+      </h1>
+      
+      <h2 class="font-exo text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 sm:mb-12 drop-shadow-md">
+        October 2025 · Cambridge, MA
+      </h2>
+      
+      <!-- Photo Accent Bar - responsive for mobile -->
+      <div class="flex flex-wrap sm:flex-nowrap justify-center gap-4 sm:space-x-6 my-8 sm:my-12">
+        <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-white shadow-lg transform hover:scale-105 transition-transform">
+          <img 
+            src="/nice_photos/Copy of 6S1A2293.jpg" 
+            alt="HackHarvard event" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-white shadow-lg transform hover:scale-105 transition-transform">
+          <img 
+            src="/nice_photos/Copy of 6S1A2875.jpg" 
+            alt="HackHarvard event" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-white shadow-lg transform hover:scale-105 transition-transform">
+          <img 
+            src="/nice_photos/Copy of 6S1A2655.jpg" 
+            alt="HackHarvard event" 
+            class="w-full h-full object-cover"
+          />
+        </div>
       </div>
-    </div>
-    <div class="mt-10 lg:mt-0">
-      <div class="flex h-full flex-col items-center justify-center">
-        <!-- Placeholder HackHarvard text -->
-        <div class="max-w-xl">
-          <p
-            class="landing-text-light dark:landing-text-dark text-center font-lexend text-5xl md:text-6xl xl:text-8xl"
-          >
-            HackHarvard
-          </p>
-          <p class="mt-10 text-center font-exo text-4xl text-white">October 2025</p>
-        </div>
-
-        <!-- Countdown 
-        <div class="mt-10 flex items-center justify-center">
-          <div
-            class="flex w-min gap-4 text-center font-exo text-[5vw] font-bold text-white sm:text-2xl md:text-3xl lg:text-3xl"
-          >
-            <div>
-              <div>{remainingTime.days}</div>
-              <div>DAYS</div>
-            </div>
-            <div>
-              <div>{remainingTime.hours}</div>
-              <div>HOURS</div>
-            </div>
-            <div>
-              <div>{remainingTime.minutes}</div>
-              <div>MINUTES</div>
-            </div>
-            <div>
-              <div>{remainingTime.seconds}</div>
-              <div>SECONDS</div>
-            </div>
-          </div>
-        </div> -->
-
-        <div class="mt-3">
-          <a class="link text-2xl font-bold" href="/what" target="_blank">What is a hackathon?</a>
-        </div>
+      
+      <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-center">
+        <a 
+          href="/what" 
+          target="_blank"
+          class="bg-white text-black px-5 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
+        >
+          What is a hackathon?
+        </a>
+        
+        <a 
+          href="#welcome" 
+          class="bg-transparent border-2 border-white px-5 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl hover:bg-white hover:bg-opacity-20 transition-all transform hover:-translate-y-1"
+        >
+          Learn More
+        </a>
       </div>
     </div>
   </div>
-  <div class="pb-8">
+  
+  <!-- Marquee at bottom -->
+  <div class="absolute bottom-0 left-0 right-0">
     <Marquee theme="light" />
   </div>
 </div>
 
 <style>
-  /* .animate {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-  }
-  .animate.a {
-    animation: fire 0.8s linear alternate infinite;
-  }
-  .animate.b {
-    animation: fire 0.6s linear alternate infinite;
-  }
-  .animate.c {
-    animation: fire 0.7s linear alternate infinite;
-  }
-  */
-  .turbulence {
-    animation: turbulence 2s ease alternate infinite;
-  }
-  @keyframes turbulence {
-    from {
-      transform: translate(0, 0) rotate(4deg);
-    }
-    to {
-      transform: translate(1rem, 1rem) rotate(-4deg);
-    }
-  }
-  @keyframes fire {
-    from {
-      stroke-dashoffset: 1;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .animate {
-      animation-play-state: paused;
-    }
+  /* Custom styles */
+  :global(html) {
+    scroll-behavior: smooth;
   }
 </style>

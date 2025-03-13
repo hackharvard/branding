@@ -30,7 +30,7 @@
   // })
 </script>
 
-<div class="py-dynamic bg-purple-100 dark:bg-secondary" id="speakers">
+<div class="py-dynamic bg-white dark:bg-gray-900" id="speakers">
   <h1 class="text-center font-exo text-5xl font-bold uppercase sm:text-7xl">Speakers</h1>
   <!-- <p class="mt-5 text-center">
     If you’re interested in being a speaker for HackHarvard, please email us at <a

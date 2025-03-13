@@ -42,11 +42,11 @@
       openState = !openState
     }}
   >
-    <div class="text-lg font-bold text-blue-700 dark:text-blue-200 md:text-xl">
+    <div class="text-base font-bold text-blue-700 dark:text-blue-200 md:text-lg">
       <slot name="title" />
     </div>
     <svg
-      class={clsx('h-6 w-6 transition-all', openState && 'rotate-180')}
+      class={clsx('h-5 w-5 transition-all', openState && 'rotate-180')}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -58,7 +58,7 @@
   </button>
 
   {#if openState}
-    <div class="p-3 text-lg md:text-xl" transition:slide={{ x: 0, y: -100, duration: 300 }}>
+    <div class="p-3 text-base md:text-lg" transition:slide={{ x: 0, y: -100, duration: 300 }}>
       <slot name="content" />
     </div>
   {/if}
