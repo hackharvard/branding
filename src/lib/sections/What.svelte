@@ -1,4 +1,4 @@
-<div class="min-h-screen bg-secondary p-8 text-white">
+<div class="min-h-screen bg-gray-900 p-8 text-white">
   <div class="mx-auto max-w-4xl">
     <h1 class="mb-4 font-exo text-5xl font-bold sm:text-7xl">What is a hackathon?</h1>
 
