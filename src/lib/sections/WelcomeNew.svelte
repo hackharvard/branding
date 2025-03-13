@@ -51,20 +51,6 @@
         </div>
       </div>
 
-      <!-- Image gallery section -->
-      <h2 class="font-exo text-3xl font-bold mb-8 text-center dark:text-white">EXPERIENCE HACKHARVARD</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-        {#each featuredImages as image, i}
-          <div class="overflow-hidden rounded-lg shadow-lg h-64 transform transition-transform duration-300 hover:scale-105">
-            <img 
-              src={image} 
-              alt={`HackHarvard moment ${i+1}`} 
-              class="w-full h-full object-cover"
-            />
-          </div>
-        {/each}
-      </div>
-
       <!-- Stats section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24 text-center">
         <div class="bg-white dark:bg-gray-800 p-10 rounded-2xl shadow-xl transform transition-transform hover:scale-105">
@@ -81,6 +67,21 @@
         </div>
       </div>
 
+      <!-- Image gallery section -->
+      <h2 class="font-exo text-3xl font-bold mb-8 text-center dark:text-white">EXPERIENCE HACKHARVARD</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        {#each featuredImages as image, i}
+          <div class="overflow-hidden rounded-lg shadow-lg h-64 transform transition-transform duration-300 hover:scale-105">
+            <img 
+              src={image} 
+              alt={`HackHarvard moment ${i+1}`} 
+              class="w-full h-full object-cover"
+            />
+          </div>
+        {/each}
+      </div>
+
+      
       <!-- Join us section -->
       <div class="text-center bg-gradient-to-r from-blue-500/80 to-purple-500/80 p-16 rounded-3xl shadow-lg">
         <h2 class="font-exo text-4xl font-bold mb-6 text-white">JOIN US IN 2025</h2>
