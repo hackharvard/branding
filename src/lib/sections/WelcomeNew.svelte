@@ -33,7 +33,7 @@
           <h2 class="font-exo text-3xl font-bold mb-6 dark:text-white">WHAT IS HACKHARVARD?</h2>
           <p class="text-lg mb-4 dark:text-gray-300">
             HackHarvard is a 36-hour undergraduate hackathon hosted at Harvard University. 
-            Every year, over 700 students from around the world come to our campus to build, 
+            Every year, over 500 students from around the world come to our campus to build, 
             learn, and create.
           </p>
           <p class="text-lg dark:text-gray-300">
@@ -54,7 +54,7 @@
       <!-- Stats section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24 text-center">
         <div class="bg-white dark:bg-gray-800 p-10 rounded-2xl shadow-xl transform transition-transform hover:scale-105">
-          <div class="font-exo text-5xl font-bold mb-4 text-blue-600 dark:text-blue-400">700+</div>
+          <div class="font-exo text-5xl font-bold mb-4 text-blue-600 dark:text-blue-400">500+</div>
           <p class="text-xl dark:text-gray-300">Students from around the world</p>
         </div>
         <div class="bg-white dark:bg-gray-800 p-10 rounded-2xl shadow-xl transform transition-transform hover:scale-105">
