@@ -1,5 +1,5 @@
 <div
-  class="py-dynamic flex flex-col items-center justify-center bg-purple-100 dark:bg-secondary"
+  class="py-dynamic flex flex-col items-center justify-center bg-white dark:bg-gray-900"
   id="hype"
 >
   <h1 class="text-center font-exo text-5xl font-bold uppercase sm:text-7xl">Get Hype</h1>

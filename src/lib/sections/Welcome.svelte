@@ -12,7 +12,7 @@
     <div
       class="absolute -left-1 h-full w-full border-2 border-white bg-gradient-to-br from-[#f5d0ce] to-[#faf3f2] dark:border-white dark:from-[#00000000] dark:to-[#00000000] md:left-0"
     />
-    <div class="relative flex h-full flex-col items-center px-[1rem] py-[5rem]">
+    <!-- <div class="relative flex h-full flex-col items-center px-[1rem] py-[5rem]">
       <h1 class="-mt-[2rem] text-center font-exo text-[2rem] dark:text-white md:text-[3rem]">
         WELCOME TO HACKHARVARD 2023
       </h1>
@@ -28,6 +28,21 @@
             Our theme for this year is Hack to the Future! Join us for an extraordinary voyage
             through time, where cutting-edge technology and boundless creativity converge,
             propelling us toward a future built on innovation and limitless possibilities.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <div class="relative flex h-full flex-col items-center px-[1rem] py-[5rem]">
+      <h1 class="-mt-[2rem] text-center font-exo text-[2rem] dark:text-white md:text-[3rem]">
+        WELCOME TO HACKHARVARD
+      </h1>
+      <div class="ml-[2rem] w-10/12">
+        <div class="mt-[1rem] text-left text-[1.1rem] dark:text-white">
+          <p>
+            HackHarvard is a 36-hour undergraduate hackathon hosted at Harvard University. 
+            Every year, over 700 students from around the world come to our campus to build, 
+            learn, and create. Applications for our 10th iteration of HackHarvard will open
+            in mid 2025.
           </p>
         </div>
       </div>

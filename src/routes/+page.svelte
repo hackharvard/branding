@@ -4,7 +4,7 @@
   import Landing from '$lib/sections/Landing.svelte'
   import Speakers from '$lib/sections/Speakers.svelte'
   import Tracks from '$lib/sections/Tracks.svelte'
-  import Welcome from '$lib/sections/Welcome.svelte'
+  import WelcomeNew from '$lib/sections/WelcomeNew.svelte'
   import Sponsors from '$lib/sections/Sponsors.svelte'
   import Hype from '../lib/sections/Hype.svelte'
   import '../app.css'
@@ -38,13 +38,13 @@
 
   <main class="mt-20">
     <Landing />
-    <Welcome />
+    <WelcomeNew />
     <Tracks />
-    <Applications />
+    <!-- <Applications /> -->
     <Faq />
-    <Hype />
-    <Speakers />
-    <Sponsors />
+    <!-- <Hype /> -->
+    <!-- <Speakers /> -->
+    <!-- <Sponsors /> -->
   </main>
   <Footer />
 {/if}
