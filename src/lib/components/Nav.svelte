@@ -74,6 +74,18 @@
           {page.name}
         </a>
       {/each}
+      <!-- China Page Link -->
+      <a
+        href="/china"
+        class={classNames(
+          'font-exo rounded-md px-3 py-2 transition-all',
+          shadow 
+            ? 'text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+            : 'text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-white/10'
+        )}
+      >
+        CHINA
+      </a>
       <button
         class="ml-2 rounded-md bg-gray-300 dark:bg-gray-700 p-2 px-5 text-gray-500 dark:text-gray-400 font-exo cursor-not-allowed"
         type="button"
@@ -166,6 +178,13 @@
         {page.name}
       </a>
     {/each}
+    <!-- China Page Link for mobile -->
+    <a
+      href="/china"
+      class="font-exo rounded-md px-4 py-3 transition-all text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+    >
+      CHINA
+    </a>
     <button
       class="rounded-md bg-gray-300 dark:bg-gray-700 p-3 px-4 text-gray-500 dark:text-gray-400 font-exo cursor-not-allowed"
       type="button"
