@@ -7,7 +7,7 @@
     <div class="w-full max-w-3xl rounded-lg bg-white p-8 shadow-lg dark:bg-black">
       <div>
         <h1 class="font-exo text-4xl uppercase text-red-700 sm:text-5xl">FAQ</h1>
-        <p class="mt-5 text-sm font-bold text-blue-700 dark:text-blue-200">
+        <p class="mt-5 text-sm font-bold text-blue-900 dark:text-blue-200">
           What if my question is not here?
         </p>
         <p class="text-sm">

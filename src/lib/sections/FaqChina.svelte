@@ -2,39 +2,33 @@
   import Disclosure from '../components/Disclosure.svelte'
 </script>
 
-<style>
-  :global(.w-full.max-w-3xl .text-blue-700) {
-    color: #90cdf4 !important; /* text-blue-200 equivalent */
-  }
-</style>
-
-<div class="bg-secondary">
+<div class="bg-white dark:bg-gray-900">
   <div class="p-dynamic flex justify-center" id="faq">
-    <div class="w-full max-w-3xl rounded-lg bg-black p-8 shadow-lg text-white">
+    <div class="w-full max-w-3xl rounded-lg bg-white p-8 shadow-lg dark:bg-black">
       <div>
-        <h1 class="font-exo text-5xl uppercase text-red-500 sm:text-7xl">FAQ</h1>
-        <p class="mt-5 font-bold text-blue-200">
+        <h1 class="font-exo text-4xl uppercase text-red-700 sm:text-5xl dark:text-red-500">FAQ</h1>
+        <p class="mt-5 text-sm font-bold text-blue-900 dark:text-blue-200">
           What if my question is not here?
         </p>
-        <p>
-          Please email us at <a class="text-blue-200 hover:underline" href="mailto:china@hackharvard.io"
+        <p class="text-sm text-gray-700 dark:text-gray-300">
+          Please email us at <a class="text-blue-900 hover:underline dark:text-blue-200" href="mailto:china@hackharvard.io"
             >china@hackharvard.io</a
           >
           and we'll get back to you ASAP!
         </p>
       </div>
-      <div class="mt-8 space-y-8">
-        <div class="space-y-6">
-          <h3 class="font-exo text-3xl text-red-500 sm:text-4xl md:text-5xl">GENERAL</h3>
+      <div class="mt-8 space-y-6">
+        <div class="space-y-4">
+          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl dark:text-red-500">GENERAL</h3>
           <Disclosure>
             <svelte:fragment slot="title">What is HackHarvard China?</svelte:fragment>
             <svelte:fragment slot="content">
-              HackHarvard China is a collaborative hackathon between HackHarvard and Guangzhou Hezong Lianheng Cultural Exchange, bringing the spirit of innovation to students in China. It follows the same format and standards as our main event at Harvard University, but is specifically tailored for students in China.
+              HackHarvard China is the HackHarvard China Challenge, a collaborative initiative bringing Harvard University's premier hackathon experience to students in China. It aims to empower middle and high school students to develop innovative solutions to global challenges through computer science, with mentorship from industry leaders and academic mentors.
             </svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">When is HackHarvard China?</svelte:fragment>
-            <svelte:fragment slot="content">HackHarvard China will take place in late August 2025. Specific dates will be announced closer to the event.</svelte:fragment>
+            <svelte:fragment slot="content">HackHarvard China will take place from August 25-29, 2025 in Shanghai. The program features a 5-day event including workshops and a 96-hour hackathon.</svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">How much does HackHarvard China cost?</svelte:fragment>
@@ -55,7 +49,7 @@
           <Disclosure>
             <svelte:fragment slot="title">Where will HackHarvard China take place?</svelte:fragment>
             <svelte:fragment slot="content">
-              The venue for HackHarvard China is currently being finalized. Once confirmed, the location details will be provided to all registered participants.
+              HackHarvard China will take place in Shanghai. The specific venue details will be provided to all registered participants prior to the event.
             </svelte:fragment>
           </Disclosure>
           <Disclosure>
@@ -65,29 +59,17 @@
             </svelte:fragment>
           </Disclosure>
         </div>
-        <div class="space-y-6">
-          <h3 class="font-exo text-3xl text-red-500 sm:text-4xl md:text-5xl">APPLY</h3>
+        <div class="space-y-4">
+          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl dark:text-red-500">APPLY</h3>
           <Disclosure>
             <svelte:fragment slot="title">When will applications open?</svelte:fragment>
             <svelte:fragment slot="content">
               Applications for HackHarvard China will open soon. Stay tuned for updates!
             </svelte:fragment>
           </Disclosure>
-          <!-- <Disclosure>
-            <svelte:fragment slot="title">Who is eligible to apply?</svelte:fragment>
-            <svelte:fragment slot="content">
-              All university students in China are welcome to apply, regardless of coding experience. International students studying in China are also eligible to apply.
-            </svelte:fragment>
-          </Disclosure> -->
-          <!-- <Disclosure>
-            <svelte:fragment slot="title">Will there be travel reimbursements?</svelte:fragment>
-            <svelte:fragment slot="content">
-              We're working with our sponsors to provide travel reimbursements for participants. More details will be provided after acceptance.
-            </svelte:fragment>
-          </Disclosure> -->
         </div>
-        <div class="space-y-6">
-          <h3 class="font-exo text-3xl text-red-500 sm:text-4xl md:text-5xl">TEAMS</h3>
+        <div class="space-y-4">
+          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl dark:text-red-500">TEAMS</h3>
           <Disclosure>
             <svelte:fragment slot="title">What if I don't have a team?</svelte:fragment>
             <svelte:fragment slot="content">
@@ -105,8 +87,8 @@
             </svelte:fragment>
           </Disclosure>
         </div>
-        <div class="space-y-6">
-          <h3 class="font-exo text-3xl uppercase text-red-500 sm:text-4xl md:text-5xl">
+        <div class="space-y-4">
+          <h3 class="font-exo text-2xl uppercase text-red-700 sm:text-3xl dark:text-red-500">
             Hackathon
           </h3>
           <Disclosure>
@@ -115,12 +97,6 @@
               Yes! We will be giving away swag to all participants who submit a project, as well as exciting prizes to all winning projects.
             </svelte:fragment>
           </Disclosure>
-          <!-- <Disclosure>
-            <svelte:fragment slot="title">What resources will be provided?</svelte:fragment>
-            <svelte:fragment slot="content">
-              HackHarvard China will provide food, drinks, and a comfortable space to work. You'll also have access to mentors, workshops, and networking opportunities with industry professionals.
-            </svelte:fragment>
-          </Disclosure> -->
           <Disclosure>
             <svelte:fragment slot="title">Is there a code of conduct?</svelte:fragment>
             <svelte:fragment slot="content">

@@ -1,111 +1,547 @@
 <script>
   import { onMount } from 'svelte';
   import FaqChina from './FaqChina.svelte';
+  import NavChina from '../components/NavChina.svelte';
+  import TeamMemberModal from '../components/TeamMemberModal.svelte';
+  import TrackModal from '../components/TrackModal.svelte';
+  import { theme } from '$lib/stores';
   
+  let scrollY;
   let ready = false;
+  let activeModal = null;
+  let activeTrack = null;
+  
+  const teamMembers = [
+    {
+      name: "Jerry",
+      role: "Sophomore",
+      focus: "Physics & Math",
+      bio: "Hey everyone, my name is Jerry and I'm a sophomore at Harvard studying physics and math. Most of my research experience has been in computational physics and chemistry so feel free to reach out if you have any questions about modeling, data analysis, optimization, or simulation. Outside of science, I'm also interested in policy, economics, history, and geopolitics.",
+      image: "/team/Jerry.jpg"
+    },
+    {
+      name: "Sahana",
+      role: "Sophomore",
+      focus: "Statistics & CS",
+      bio: "Hi! My name is Sahana and I am a sophomore at Harvard studying statistics and computer science. I have technical experience in iOS app development, web design, and biostatistical modeling, and business experience in e-commerce and marketing. I've taken coursework in data science and entrepreneurship!",
+      image: "/team/Sahana.JPG"
+    },
+    {
+      name: "Hugo",
+      role: "Junior",
+      focus: "Mathematics",
+      bio: "Hi, I am Hugo, a junior at Harvard studying mathematics. I have worked the previous two summers in financial technologies, leveraging Python and C# in data science and data engineering applications. I have a passion for both analyzing and engineering data, having taken various courses in machine learning and data science.",
+      image: "/team/Hugo.jpg"
+    },
+    {
+      name: "Ivan",
+      role: "Sophomore",
+      focus: "CS & Applied Math",
+      bio: "I'm Ivan, a sophomore at Harvard studying Computer Science and Applied Mathematics. I've got experience in languages like Python and C (and a bit of C++), and applications of linear algebra. I've spent lots of time teaching CS to students and have taken related classes in data science.",
+      image: "/team/Ivan.jpg"
+    },
+    {
+      name: "Yuen Ler",
+      role: "Senior",
+      focus: "CS & Statistics",
+      bio: "I'm Yuen Ler, a senior at Harvard studying Computer Science and Statistics. Hacking is my life—I've competed in nine hackathons so far and won prizes at four of them! I'm also currently co-founder of Finterview, a startup providing AI-driven technical interview screening for finance companies. After graduation, I'll be joining Amazon as a Software Engineer. Always happy to chat about startups, hacking, or anything tech!",
+      image: "/team/Yuen Ler.jpeg"
+    },
+    {
+      name: "Jen",
+      role: "First-Year",
+      focus: "Applied Math & Economics",
+      bio: "I'm Jen and I'm a first-year studying Applied Math and Economics. I'm currently involved with research, policy work, and consulting on campus as I'm interested in learning more about challenges in economic development and public policy. I also grew up being involved in running my parents' business so I would be happy to chat about businesses and marketing.",
+      image: "/team/Jen.jpeg"
+    },
+    {
+      name: "Luna",
+      role: "First-Year",
+      focus: "Environmental Engineering",
+      bio: "Hi! My name is Luna and I'm a first-year environmental engineering student at Harvard. I was a two-time semifinalist in the international Technovation Challenge for app development and tech entrepreneurship. During my high school years in Canada, I founded my school's Sprout Beyond STEM club and led Learn to Code workshops. I'm also an analyst at Harvard Undergraduate Consulting on Business and the Environment, where I advise technology and engineering companies about sustainability.",
+      image: "/team/Luna.jpg"
+    }
+  ];
+  
+  const tracks = [
+    {
+      title: "Education",
+      icon: "🎓",
+      description: "How can we use technology to benefit our education system? Online courses, educational websites, and video call apps have made it possible for students to learn in more convenient ways. This track focuses on platforms that provide students with more educational opportunities using digital methods. Consider entering the Education track if your project provides new ways for students to learn effectively or teaches students about important topics.",
+      color: "bg-blue-500"
+    },
+    {
+      title: "Health",
+      icon: "🩺",
+      description: "How can we use technology to strengthen our healthcare systems? New developments in apps, websites, and sensors can pave the way for better quality healthcare and improved access to medical aid. This track focuses on technologies that improve physical and mental healthcare outcomes, such as telemedicine platforms, health trackers, and more. Consider entering the Health track if your project addresses issues related to medical care access and quality.",
+      color: "bg-red-500"
+    },
+    {
+      title: "Climate and Energy",
+      icon: "🌱",
+      description: "How can we use technology to tackle environmental issues? Innovative solutions in renewable energy, ecosystem conservation, and waste management have been key to addressing pollution and preventing climate disasters. This track focuses on initiatives aimed to protect the Earth's environment by reducing greenhouse gas emissions, cleaning up ecosystems, and more. Consider entering the Climate and Energy track if your project's main goal is to promote sustainability and create a cleaner, healthier environment.",
+      color: "bg-green-500"
+    },
+    {
+      title: "Smart Cities",
+      icon: "🏙️",
+      description: "How can we use technology to enhance today's cities? Smart urban infrastructure has the potential to optimize traffic and transportation, improve power usage, integrate green energy into residents' lives, and more. This track focuses on improvements to urban operations, allowing city centers to function more efficiently and sustainably. Consider entering the Smart Cities track if your project provides a technological solution to a problem encountered in daily city life.",
+      color: "bg-purple-500"
+    }
+  ];
+  
+  function showTeamMemberModal(member) {
+    activeModal = member;
+  }
+  
+  function closeTeamMemberModal() {
+    activeModal = null;
+  }
+  
+  function showTrackModal(track) {
+    activeTrack = track;
+  }
+  
+  function closeTrackModal() {
+    activeTrack = null;
+  }
+  
   onMount(() => {
+    // Set dark mode as default
+    if (document.documentElement.classList.contains('dark') === false) {
+      document.documentElement.classList.add('dark');
+      theme.toggle(); // Update the store to match the UI
+    }
+    
     ready = true;
   });
 </script>
 
-<div class="min-h-screen bg-secondary p-8 text-white">
-  <div class="mx-auto max-w-4xl">
-    <!-- Header Section -->
-    <section class="mb-5">
-      <h1 class="mb-4 font-exo text-5xl font-bold sm:text-7xl">HackHarvard China</h1>
-      
-      <p class="mb-5 text-lg">
-        A collaborative hackathon between HackHarvard and Guangzhou Hezong Lianheng Cultural Exchange, bringing the spirit of innovation to students in China.
+<svelte:window bind:scrollY />
+
+<!-- Navigation Bar -->
+<NavChina />
+
+<!-- Hero Section with Parallax -->
+<div class="relative h-[70vh] w-full overflow-hidden">
+  <img 
+    src="/nice_photos/Copy of 606A9181.jpg" 
+    alt="HackHarvard China" 
+    class="absolute h-full w-full object-cover object-center transform transition-transform duration-500"
+    style="transform: translateY({scrollY * 0.15}px);"
+  />
+  <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="text-center px-6 max-w-4xl mx-auto" style="transform: translateY({-scrollY * 0.08}px);">
+      <h1 class="font-lexend text-5xl sm:text-7xl font-bold mb-4 text-white drop-shadow-lg tracking-tighter">
+        HackHarvard China
+      </h1>
+      <p class="font-exo text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+        A collaborative hackathon bringing the spirit of innovation to students in China
       </p>
-
-      <!-- <div class="overflow-hidden rounded-lg shadow-lg">
-        <img src="/images/china-banner.jpg" alt="HackHarvard China" class="w-full" onerror="this.src='/images/2022/code.jpg'" />
-      </div> -->
-    </section>
-
-    <!-- About Section -->
-    <section class="mb-16 mt-5">
-      <h2 class="mb-6 font-exo text-3xl font-bold text-red-500">About HackHarvard China</h2>
-      
-      <p class="mb-8 text-lg">
-        Experience the same exciting 36-hour hackathon format as our flagship event at Harvard University, now in China! Work with mentors, collaborate with fellow innovators, and build amazing projects that make a difference.
-      </p>
-    </section>
-
-    <!-- Event Details Section -->
-    <section class="mb-16 mt-5">
-      <h2 class="mb-6 font-exo text-3xl font-bold text-red-500">Event Details</h2>
-      
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-        <div class="overflow-hidden rounded-lg bg-gray-800 p-6 shadow-lg">
-          <h3 class="mb-3 font-exo text-xl font-bold text-blue-400">When</h3>
-          <p>Late August 2025</p>
-        </div>
-        
-        <div class="overflow-hidden rounded-lg bg-gray-800 p-6 shadow-lg">
-          <h3 class="mb-3 font-exo text-xl font-bold text-green-400">Duration</h3>
-          <p>36 hours of hacking, workshops, and fun!</p>
-        </div>
-        
-        <div class="overflow-hidden rounded-lg bg-gray-800 p-6 shadow-lg">
-          <h3 class="mb-3 font-exo text-xl font-bold text-purple-400">Format</h3>
-          <p>In-person event!</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Schedule Section -->
-    <section class="mb-16 mt-5">
-      <h2 class="mb-6 font-exo text-3xl font-bold text-red-500">Schedule Overview</h2>
-      
-      <div class="overflow-hidden rounded-lg bg-gray-900 p-6 shadow-lg">
-        <p class="mb-6 text-lg">A detailed schedule will be announced closer to the event.</p>
-        
-        <div class="mb-6 border-b border-gray-700 pb-4">
-          <h3 class="font-exo text-xl font-bold text-yellow-400">Day 1</h3>
-          <p class="mt-2">Check-in, Opening Ceremony, Team Formation, Hacking Begins</p>
-        </div>
-        
-        <div class="mb-6 border-b border-gray-700 pb-4">
-          <h3 class="font-exo text-xl font-bold text-yellow-400">Day 2</h3>
-          <p class="mt-2">Full Day of Hacking, Workshops, Mentorship</p>
-        </div>
-        
-        <div>
-          <h3 class="font-exo text-xl font-bold text-yellow-400">Day 3</h3>
-          <p class="mt-2">Project Submissions, Demos, Judging, Awards Ceremony</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="mb-16 mt-24">
-      <FaqChina />
-    </section>
-
-    <!-- Contact Section -->
-    <section class="mb-16 mt-24">
-      <h2 class="mb-6 font-exo text-3xl font-bold text-red-500">Contact Us</h2>
-      
-      <p class="mb-6 text-lg">
-        Questions? Email us at <a href="mailto:china@hackharvard.io" class="text-blue-400 hover:underline">china@hackharvard.io</a>
-      </p>
-    </section>
-
-    <!-- CTA Section -->
-    <section>
-      <div class="rounded-lg bg-red-900 p-8 shadow-lg text-center">
-        <h2 class="mb-4 font-exo text-2xl font-bold text-white">Join Us in China!</h2>
-        <p class="mb-6 text-lg">
-          Be part of the first-ever HackHarvard event in China.
-        </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="#about" 
+          class="bg-white text-black px-6 py-3 rounded-lg font-bold text-lg shadow-xl hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
+        >
+          Learn More
+        </a>
         <button 
-          class="inline-block rounded-lg bg-yellow-500 px-6 py-3 font-bold text-black transition-colors hover:bg-yellow-400 cursor-not-allowed opacity-90"
+          class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-bold text-lg shadow-xl hover:bg-white hover:bg-opacity-20 transition-all transform hover:-translate-y-1 cursor-not-allowed opacity-90"
           disabled
         >
           Applications Opening Soon
         </button>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="bg-white dark:bg-gray-900 min-h-screen">
+  <div class="mx-auto max-w-6xl px-6 py-20">
+    <!-- Welcome Section -->
+    <section class="mb-24" id="about">
+      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">WELCOME TO HACKHARVARD CHINA</h2>
+      
+      <div class="mx-auto max-w-5xl">
+        <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
+          We are delighted to invite you to participate in HackHarvard, Harvard University's premier undergraduate hackathon 
+          where the brightest young minds come together to create innovative technological solutions to global challenges.
+        </p>
+        
+        <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
+          The <span class="font-semibold">HackHarvard China Challenge</span> will take place <span class="font-semibold">August 25-29, 2025</span> in Shanghai, 
+          bringing together talented middle and high school students with industry leaders and academic mentors. Our 
+          program features enriching workshops and a 96-hour student-run hackathon, serving as a catalyst for innovation 
+          across various domains including healthcare, sustainability, education, and social impact.
+        </p>
+        
+        <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
+          Participants will develop and showcase their prototypes, receive mentorship from industry experts, and collaborate 
+          with talented peers in a dynamic environment. Winning teams will receive awards and the chance to showcase their 
+          projects at the next HackHarvard hackathon on the Harvard University campus.
+        </p>
+        
+        <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
+          We are thrilled to partner with <span class="font-semibold">High Leap Education (合励教育)</span> for this year's challenge. 
+          Together, we aim to empower the next generation of innovators to create impactful solutions for a better future.
+        </p>
+        
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          For more details, contact us at <a href="mailto:china@hackharvard.io" class="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300">china@hackharvard.io</a>.
+          We look forward to welcoming you at the HackHarvard China Challenge!
+        </p>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="mb-24" id="team">
+      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">MEET THE TEAM</h2>
+      
+      <div class="mx-auto max-w-5xl">
+        <p class="text-lg mb-8 text-center text-gray-700 dark:text-gray-300">
+          Our team of Harvard students is excited to bring HackHarvard to China and foster collaborative innovation.
+        </p>
+        
+        <!-- Top row (4 team members) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center mb-12">
+          {#each teamMembers.slice(0, 4) as member, i (member.name)}
+            <div class="flex flex-col items-center text-center">
+              <button 
+                class="group relative w-32 h-32 rounded-full overflow-hidden transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 mx-auto"
+                on:click={() => activeModal = i}
+              >
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  class="w-full h-full object-cover" 
+                />
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                  <span class="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Bio</span>
+                </div>
+              </button>
+              <h3 class="mt-4 text-lg font-bold text-black dark:text-white">{member.name}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 text-center">{member.role} • {member.focus}</p>
+            </div>
+          {/each}
+        </div>
+        
+        <!-- Bottom row (3 team members) -->
+        <div class="flex justify-center gap-8 flex-wrap">
+          {#each teamMembers.slice(4) as member, i (member.name)}
+            <div class="flex flex-col items-center text-center">
+              <button 
+                class="group relative w-32 h-32 rounded-full overflow-hidden transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 mx-auto"
+                on:click={() => activeModal = i + 4}
+              >
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  class="w-full h-full object-cover" 
+                />
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                  <span class="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Bio</span>
+                </div>
+              </button>
+              <h3 class="mt-4 text-lg font-bold text-black dark:text-white">{member.name}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 text-center">{member.role} • {member.focus}</p>
+            </div>
+          {/each}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Tracks Section -->
+    <section class="mb-24" id="tracks">
+      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">TRACKS</h2>
+      
+      <div class="mx-auto max-w-5xl">
+        <p class="text-lg mb-8 text-center text-gray-700 dark:text-gray-300">
+          Choose from one of our four exciting tracks for your project. Click on each track to learn more.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {#each tracks as track, i}
+            <div 
+              class="relative flex flex-col items-center p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-gray-50 dark:bg-gray-800 text-center overflow-hidden"
+            >
+              <div class="absolute top-0 left-0 w-full h-1 {track.color}"></div>
+              <div class="text-4xl mb-3">{track.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{track.title}</h3>
+              <p class="text-gray-700 dark:text-gray-300 line-clamp-2 mb-4">
+                {track.description.split('.')[0]}.
+              </p>
+              <button 
+                class="mt-auto px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                on:click={() => activeTrack = i}
+              >
+                Learn More
+              </button>
+            </div>
+          {/each}
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="mb-24" id="schedule">
+      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">SCHEDULE OVERVIEW</h2>
+      
+      <div class="mx-auto max-w-5xl">
+        <p class="text-lg mb-8 text-center text-gray-700 dark:text-gray-300">
+          A 5-day program packed with innovation, learning, and collaboration.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md">
+            <h3 class="font-exo text-xl font-bold mb-4 text-black dark:text-white flex items-center">
+              <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
+              Day 1: Sunday, August 25
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Registration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Opening Ceremony</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Ice-Breaking & Team Building</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md">
+            <h3 class="font-exo text-xl font-bold mb-4 text-black dark:text-white flex items-center">
+              <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">2</span>
+              Day 2: Monday, August 26
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Hackathon begins</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Workshops</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Continuous hacking time</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Meals provided</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md">
+            <h3 class="font-exo text-xl font-bold mb-4 text-black dark:text-white flex items-center">
+              <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">3</span>
+              Day 3: Tuesday, August 27
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Continued hackathon</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Additional workshops</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Meals provided</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md">
+            <h3 class="font-exo text-xl font-bold mb-4 text-black dark:text-white flex items-center">
+              <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">4</span>
+              Day 4: Wednesday, August 28
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Full day of hacking</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Meals provided</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Last stretch of development</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Day 5 centered with same width -->
+        <div class="mt-8 flex justify-center">
+          <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md w-full md:w-[calc(50%-1rem)]">
+            <h3 class="font-exo text-xl font-bold mb-4 text-black dark:text-white flex items-center">
+              <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">5</span>
+              Day 5: Thursday, August 29
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Hackathon Fair</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Project Presentations</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2">•</span>
+                <span>Closing Ceremony</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Workshops Section -->
+    <section class="mb-24" id="workshops">
+      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">WORKSHOPS</h2>
+      
+      <div class="mx-auto max-w-5xl">
+        <p class="text-lg mb-8 text-gray-700 dark:text-gray-300">
+          Our program offers a variety of workshops, both virtual and in-person, designed for participants with different levels of experience. 
+          Whether you're new to coding or an experienced developer, we have learning paths to help you succeed in the hackathon.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- Learning Paths -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">Learning Paths</h3>
+            
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">No Coding Experience</h4>
+              <p class="text-gray-700 dark:text-gray-300 mb-2">Take this workshop:</p>
+              <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                <li>Intro to Scratch</li>
+              </ul>
+            </div>
+            
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">Text-Based Programming Basics</h4>
+              <p class="text-gray-700 dark:text-gray-300 mb-2">Complete this sequence:</p>
+              <ol class="list-decimal pl-5 text-gray-700 dark:text-gray-300">
+                <li>Intro to Scratch</li>
+                <li>Intro to text-based programming (JS)</li>
+                <li>Intro to P5.js</li>
+              </ol>
+            </div>
+            
+            <div>
+              <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">Web App Development</h4>
+              <p class="text-gray-700 dark:text-gray-300 mb-2">Complete this sequence:</p>
+              <ol class="list-decimal pl-5 text-gray-700 dark:text-gray-300">
+                <li>Intro to Scratch</li>
+                <li>Intro to text-based programming (JS)</li>
+                <li>Front-end 101 (HTML + CSS)</li>
+                <li>How to make a web app (React)</li>
+              </ol>
+            </div>
+          </div>
+          
+          <!-- General Hackathon Workshops -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">For All Skill Levels</h3>
+            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 mb-6">
+              <li>How to code with AI</li>
+              <li>Github</li>
+              <li>How to come up with a great hackathon idea + how to win a hackathon</li>
+              <li>How to demo a project</li>
+              <li>Design with Figma</li>
+            </ul>
+            
+            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">For Experienced Coders</h3>
+            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <li>Building and deploying APIs with Vercel</li>
+              <li>Building AI-agent web apps</li>
+              <li>Vector databases and RAG for LLM apps</li>
+              <li>Finding and integrating cool APIs (Spotify, Weather, etc.)</li>
+              <li>Data analysis with Python (pandas, numpy)</li>
+              <li>ML with Python (custom CNNs, PyTorch/TensorFlow)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <p class="text-lg text-center text-gray-700 dark:text-gray-300">
+          Workshop schedules and sign-up information will be provided to registered participants.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-24" id="faq">
+      <FaqChina />
+    </section>
+
+    <!-- CTA Section -->
+    <section class="mb-16" id="call-to-action">
+      <div class="bg-gradient-to-r from-blue-500 to-red-500 rounded-3xl shadow-lg p-16 text-center">
+        <h2 class="font-exo text-4xl font-bold mb-6 text-white">JOIN US IN CHINA!</h2>
+        <p class="text-xl max-w-3xl mx-auto mb-10 text-white/90 leading-relaxed">
+          Be part of the first-ever HackHarvard event in China. Connect with innovators, learn new skills, 
+          and create something amazing together.
+        </p>
+        <div class="flex justify-center">
+          <button 
+            class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-gray-100 transition-all transform hover:scale-105 cursor-not-allowed opacity-90"
+            disabled
+          >
+            Applications Opening Soon
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="text-center" id="contact">
+      <h2 class="font-exo text-3xl font-bold mb-6 text-black dark:text-white">CONTACT US</h2>
+      
+      <p class="text-lg mb-10 text-gray-700 dark:text-gray-300">
+        Questions? Email us at <a href="mailto:china@hackharvard.io" class="text-blue-600 dark:text-blue-400 hover:underline">china@hackharvard.io</a>
+      </p>
     </section>
   </div>
 </div>
+
+<!-- Team Member Modals -->
+{#each teamMembers as member, i}
+  <TeamMemberModal 
+    isOpen={activeModal === i}
+    name={member.name}
+    bio={member.bio}
+    image={member.image}
+    on:click={() => activeModal = null}
+  />
+{/each}
+
+<!-- Track Modals -->
+{#each tracks as track, i}
+  <TrackModal 
+    isOpen={activeTrack === i}
+    title={track.title}
+    description={track.description}
+    icon={track.icon}
+  />
+{/each}
+
+<style>
+  /* Custom styles */
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+</style>

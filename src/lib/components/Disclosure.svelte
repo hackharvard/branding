@@ -42,7 +42,7 @@
       openState = !openState
     }}
   >
-    <div class="text-base font-bold text-blue-700 dark:text-blue-200 md:text-lg">
+    <div class="text-base font-bold text-blue-900 dark:text-blue-200 md:text-lg">
       <slot name="title" />
     </div>
     <svg
