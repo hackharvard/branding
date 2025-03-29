@@ -42,11 +42,6 @@
       name: 'WORKSHOPS',
       href: '#workshops',
       isExternal: false
-    },
-    {
-      name: 'FAQ',
-      href: '#faq',
-      isExternal: false
     }
   ]
   function updateShadow() {

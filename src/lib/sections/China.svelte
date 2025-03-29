@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte';
-  import FaqChina from './FaqChina.svelte';
   import NavChina from '../components/NavChina.svelte';
   import TeamMemberModal from '../components/TeamMemberModal.svelte';
   import TrackModal from '../components/TrackModal.svelte';
@@ -58,7 +57,7 @@
       name: "Luna",
       role: "First-Year",
       focus: "Environmental Engineering",
-      bio: "Hi! My name is Luna and I'm a first-year environmental engineering student at Harvard. I was a two-time semifinalist in the international Technovation Challenge for app development and tech entrepreneurship. During my high school years in Canada, I founded my school's Sprout Beyond STEM club and led Learn to Code workshops. I'm also an analyst at Harvard Undergraduate Consulting on Business and the Environment, where I advise technology and engineering companies about sustainability.",
+      bio: "Hi! I’m Luna and I’m a first-year environmental engineering student at Harvard. My passions are sustainability, technology, and entrepreneurship! I was a two-time semifinalist in the international Technovation Challenge for app development and tech entrepreneurship. I’m also an analyst at Harvard Undergraduate Consulting on Business and the Environment, where I advise tech and engineering companies about sustainable strategies.",
       image: "/team/Luna.jpg"
     }
   ];
@@ -283,7 +282,92 @@
         </div>
       </div>
     </section>
-
+    
+    <!-- Judging Rubric Section -->
+    <section class="mb-24" id="rubric">
+      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">JUDGING RUBRIC</h2>
+      
+      <div class="mx-auto max-w-5xl">
+        <p class="text-lg mb-8 text-center text-gray-700 dark:text-gray-300">
+          Projects will be evaluated based on the following criteria, with each category contributing equally to the final score.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white text-xl mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Creativity and Originality</h3>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">
+              20% of total score. Judges will evaluate the uniqueness of your idea and how innovative your approach is to solving the problem.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center text-white text-xl mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Technical Complexity</h3>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">
+              20% of total score. Judges will assess the technical challenges overcome and the sophistication of your implementation.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white text-xl mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Functionality and Usability</h3>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">
+              20% of total score. Judges will evaluate how well your project works and how intuitive it is to use.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white text-xl mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Branding and Business/Social Impact</h3>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">
+              20% of total score. Judges will assess the potential real-world impact of your project and its viability as a business or social innovation.
+            </p>
+          </div>
+        </div>
+        
+        <div class="mt-6 flex justify-center">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md max-w-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white text-xl mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Teamwork and Collaboration</h3>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">
+              20% of total score. Judges will evaluate how well your team collaborated, the roles each member played, and the effectiveness of your teamwork.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- Schedule Section -->
     <section class="mb-24" id="schedule">
       <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">SCHEDULE OVERVIEW</h2>
@@ -481,11 +565,6 @@
           Workshop schedules and sign-up information will be provided to registered participants.
         </p>
       </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="mb-24" id="faq">
-      <FaqChina />
     </section>
 
     <!-- CTA Section -->
