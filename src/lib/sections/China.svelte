@@ -3,6 +3,7 @@
   import NavChina from '../components/NavChina.svelte';
   import TeamMemberModal from '../components/TeamMemberModal.svelte';
   import TrackModal from '../components/TrackModal.svelte';
+  import FaqChina from '../sections/FaqChina.svelte';
   import { theme } from '$lib/stores';
   
   let scrollY;
@@ -567,6 +568,11 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="mb-24" id="faq">
+      <FaqChina />
+    </section>
+    
     <!-- CTA Section -->
     <section class="mb-16" id="call-to-action">
       <div class="bg-gradient-to-r from-blue-500 to-red-500 rounded-3xl shadow-lg p-16 text-center">
