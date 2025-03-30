@@ -37,7 +37,7 @@
       name: "Ivan",
       role: "Sophomore",
       focus: "CS & Applied Math",
-      bio: "I'm Ivan, a sophomore at Harvard studying Computer Science and Applied Mathematics. I've got experience in languages like Python and C (and a bit of C++), and applications of linear algebra. I've spent lots of time teaching CS to students and have taken related classes in data science.",
+      bio: "I’m Ivan, a sophomore at Harvard studying Computer Science and Applied Mathematics. I’ve spent the last few years exploring CS and education, and have been on staff for CS50, one of the largest massive online open courses in the world, teaching students Python, C, SQL, HTML/CSS/Javascript, and Flask. I’m also an Algorithm Team Lead for Datamatch, a college matchmaking service used by over 16,000 students nationwide. Talk to me about ethical data science or data privacy!",
       image: "/team/Ivan.jpg"
     },
     {
@@ -46,6 +46,13 @@
       focus: "CS & Statistics",
       bio: "I'm Yuen Ler, a senior at Harvard studying Computer Science and Statistics. Hacking is my life—I've competed in nine hackathons so far and won prizes at four of them! I'm also currently co-founder of Finterview, a startup providing AI-driven technical interview screening for finance companies. After graduation, I'll be joining Amazon as a Software Engineer. Always happy to chat about startups, hacking, or anything tech!",
       image: "/team/Yuen Ler.jpeg"
+    },
+    {
+      name: "Kathryn",
+      role: "Sophomore",
+      focus: "CS",
+      bio: "I'm Kathryn, a sophomore at Harvard studying Computer Science. I previously interned as a Software Engineer at Amazon and am actively involved with Harvard's Women in Computer Science. I'm also part of WECode (Women Engineers Code), the world's largest student-run undergraduate tech conference organized by undergraduate women at Harvard University.",
+      image: "/team/Kathryn.jpg"
     },
     {
       name: "Jen",
@@ -227,8 +234,8 @@
           {/each}
         </div>
         
-        <!-- Bottom row (3 team members) -->
-        <div class="flex justify-center gap-8 flex-wrap">
+        <!-- Bottom row (4 team members) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
           {#each teamMembers.slice(4) as member, i (member.name)}
             <div class="flex flex-col items-center text-center">
               <button 
@@ -500,64 +507,63 @@
       
       <div class="mx-auto max-w-5xl">
         <p class="text-lg mb-8 text-gray-700 dark:text-gray-300">
-          Our program offers a variety of workshops, both virtual and in-person, designed for participants with different levels of experience. 
-          Whether you're new to coding or an experienced developer, we have learning paths to help you succeed in the hackathon.
+          Our program offers a variety of workshops designed to help participants build the skills they need for a successful hackathon experience.
+          Explore our diverse workshop offerings across different areas of technology and project development.
         </p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <!-- Learning Paths -->
+          <!-- Programming Fundamentals -->
           <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">Learning Paths</h3>
-            
-            <div class="mb-6">
-              <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">No Coding Experience</h4>
-              <p class="text-gray-700 dark:text-gray-300 mb-2">Take this workshop:</p>
-              <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                <li>Intro to Scratch</li>
-              </ul>
-            </div>
-            
-            <div class="mb-6">
-              <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">Text-Based Programming Basics</h4>
-              <p class="text-gray-700 dark:text-gray-300 mb-2">Complete this sequence:</p>
-              <ol class="list-decimal pl-5 text-gray-700 dark:text-gray-300">
-                <li>Intro to Scratch</li>
-                <li>Intro to text-based programming (JS)</li>
-                <li>Intro to P5.js</li>
-              </ol>
-            </div>
-            
-            <div>
-              <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">Web App Development</h4>
-              <p class="text-gray-700 dark:text-gray-300 mb-2">Complete this sequence:</p>
-              <ol class="list-decimal pl-5 text-gray-700 dark:text-gray-300">
-                <li>Intro to Scratch</li>
-                <li>Intro to text-based programming (JS)</li>
-                <li>Front-end 101 (HTML + CSS)</li>
-                <li>How to make a web app (React)</li>
-              </ol>
-            </div>
-          </div>
-          
-          <!-- General Hackathon Workshops -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">For All Skill Levels</h3>
+            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">Programming Fundamentals</h3>
             <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 mb-6">
-              <li>How to code with AI</li>
-              <li>Github</li>
-              <li>How to come up with a great hackathon idea + how to win a hackathon</li>
-              <li>How to demo a project</li>
-              <li>Design with Figma</li>
+              <li>Introduction to Scratch</li>
+              <li>Python Basics</li>
+              <li>JavaScript Essentials I</li>
+              <li>JavaScript Essentials II</li>
+              <li>Front-end Development Fundamentals</li>
+              <li>Creative Coding with P5.js</li>
             </ul>
             
-            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">For Experienced Coders</h3>
+            <!-- Development Tools -->
+            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">Development Tools</h3>
             <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-              <li>Building and deploying APIs with Vercel</li>
-              <li>Building AI-agent web apps</li>
-              <li>Vector databases and RAG for LLM apps</li>
-              <li>Finding and integrating cool APIs (Spotify, Weather, etc.)</li>
-              <li>Data analysis with Python (pandas, numpy)</li>
-              <li>ML with Python (custom CNNs, PyTorch/TensorFlow)</li>
+              <li>Version Control with GitHub</li>
+              <li>Creating and Using APIs</li>
+            </ul>
+          </div>
+          
+          <!-- Web & App Development -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">Web & App Development</h3>
+            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 mb-6">
+              <li>Building Web Apps with React</li>
+              <li>Mobile App Development with Thunkable</li>
+              <li>Creating AI-powered Web Applications</li>
+            </ul>
+            
+            <!-- Data & Machine Learning -->
+            <h3 class="text-xl font-bold mb-4 text-black dark:text-white">Data & Machine Learning</h3>
+            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <li>Data Analysis in Python</li>
+              <li>Machine Learning Fundamentals</li>
+              <li>Advanced Machine Learning Techniques</li>
+              <li>Understanding Statistical Models</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Project Development -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md mb-8">
+          <h3 class="text-xl font-bold mb-4 text-center text-black dark:text-white">Project Development</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 mb-6 md:mb-0">
+              <li>Hackathon Ideation Strategies</li>
+              <li>UI/UX Prototyping with Figma</li>
+              <li>E-commerce Business Fundamentals</li>
+            </ul>
+            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <li>The Art of the Pitch</li>
+              <li>Brand Development Essentials</li>
             </ul>
           </div>
         </div>
