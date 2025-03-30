@@ -19,7 +19,6 @@
       </div>
       <div class="mt-8 space-y-6">
         <div class="space-y-4">
-          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl dark:text-red-500">WEBSITE FAQS</h3>
           <Disclosure>
             <svelte:fragment slot="title">What is HackHarvard China?</svelte:fragment>
             <svelte:fragment slot="content">
