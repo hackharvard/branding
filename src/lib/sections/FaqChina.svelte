@@ -19,7 +19,7 @@
       </div>
       <div class="mt-8 space-y-6">
         <div class="space-y-4">
-          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl dark:text-red-500">GENERAL</h3>
+          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl dark:text-red-500">WEBSITE FAQS</h3>
           <Disclosure>
             <svelte:fragment slot="title">What is HackHarvard China?</svelte:fragment>
             <svelte:fragment slot="content">
@@ -31,23 +31,7 @@
             <svelte:fragment slot="content">HackHarvard China will take place from August 25-29, 2025 in Shanghai. The program features a 5-day event including workshops and a 96-hour hackathon.</svelte:fragment>
           </Disclosure>
           <Disclosure>
-            <svelte:fragment slot="title">How much does HackHarvard China cost?</svelte:fragment>
-            <svelte:fragment slot="content">
-              HackHarvard China is free to attend! In addition to hacking, you'll have the opportunity to
-              participate in workshops, work with mentors, network with prominent company
-              representatives, collect swag, and more!
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">What if I've never hacked before?</svelte:fragment>
-            <svelte:fragment slot="content">
-              That's okay! HackHarvard China offers beginner workshops specifically designed to help you
-              dive into the world of hacking. There will be plenty of other introductory hackers and
-              it'll be a great opportunity to learn.
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">Where will HackHarvard China take place?</svelte:fragment>
+            <svelte:fragment slot="title">Where will HackHarvard take place?</svelte:fragment>
             <svelte:fragment slot="content">
               HackHarvard China will take place in Shanghai. The specific venue details will be provided to all registered participants prior to the event.
             </svelte:fragment>
@@ -55,46 +39,37 @@
           <Disclosure>
             <svelte:fragment slot="title">Is HackHarvard China in-person?</svelte:fragment>
             <svelte:fragment slot="content">
-              Yes, HackHarvard China is an in-person event with virtual mentorship opportunities. Participants will need to be physically present at the venue.
+              Yes, HackHarvard China is an in-person event with an online preparatory course package. Participants will need to be physically present at the venue.
             </svelte:fragment>
           </Disclosure>
-        </div>
-        <div class="space-y-4">
-          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl dark:text-red-500">APPLY</h3>
+          <Disclosure>
+            <svelte:fragment slot="title">What if I have never hacked before?</svelte:fragment>
+            <svelte:fragment slot="content">
+              That's okay! HackHarvard China offers beginner workshops specifically designed to help you dive into the world of hacking. There will be plenty of other introductory hackers and it'll be a great opportunity to learn.
+            </svelte:fragment>
+          </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">When will applications open?</svelte:fragment>
             <svelte:fragment slot="content">
               Applications for HackHarvard China will open soon. Stay tuned for updates!
             </svelte:fragment>
           </Disclosure>
-        </div>
-        <div class="space-y-4">
-          <h3 class="font-exo text-2xl text-red-700 sm:text-3xl dark:text-red-500">TEAMS</h3>
+          <Disclosure>
+            <svelte:fragment slot="title">How does team work?</svelte:fragment>
+            <svelte:fragment slot="content">
+              Each team consists of 2-5 members. All team members must collaborate to complete and submit one project.
+            </svelte:fragment>
+          </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">What if I don't have a team?</svelte:fragment>
             <svelte:fragment slot="content">
-              If you do not have a team yet, don't worry. There will be several events and
-              communications channels geared towards facilitating team formation and project
-              ideation. We will help you find people to work with!
+              If you do not have a team yet, don't worry. There will be several events and communications channels geared towards facilitating team formation and project ideation. We will help you find people to work with!
             </svelte:fragment>
           </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">How do teams work?</svelte:fragment>
-            <svelte:fragment slot="content">
-              Each team consists of a maximum of four members. However, all teammates must submit
-              individual applications to HackHarvard China and all applications will be evaluated individually,
-              regardless of your intended team.
-            </svelte:fragment>
-          </Disclosure>
-        </div>
-        <div class="space-y-4">
-          <h3 class="font-exo text-2xl uppercase text-red-700 sm:text-3xl dark:text-red-500">
-            Hackathon
-          </h3>
           <Disclosure>
             <svelte:fragment slot="title">Will there be prizes?</svelte:fragment>
             <svelte:fragment slot="content">
-              Yes! We will be giving away swag to all participants who submit a project, as well as exciting prizes to all winning projects.
+              Yes! We will be giving away certificate of participation and swag to all participants who submit a project, as well as exciting prizes to all winning projects.
             </svelte:fragment>
           </Disclosure>
           <Disclosure>
