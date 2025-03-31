@@ -48,12 +48,6 @@
             </svelte:fragment>
           </Disclosure>
           <Disclosure>
-            <svelte:fragment slot="title">When will applications open?</svelte:fragment>
-            <svelte:fragment slot="content">
-              Applications for HackHarvard China will open soon. Stay tuned for updates!
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
             <svelte:fragment slot="title">How does team work?</svelte:fragment>
             <svelte:fragment slot="content">
               Each team consists of 2-5 members. All team members must collaborate to complete and submit one project.
