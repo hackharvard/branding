@@ -104,14 +104,14 @@
           {page.name}
         </a>
       {/each}
-      <button
-        class="ml-2 rounded-md bg-gray-300 dark:bg-gray-700 p-2 px-5 text-gray-500 dark:text-gray-400 font-exo cursor-not-allowed"
-        type="button"
-        disabled
-        title="Applications not open yet"
+      <a
+        href="https://jinshuju.com/f/vgsP3G?code=051ybDkl2H0Tjf4c71ml2Nk8cA2ybDk4"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ml-2 rounded-md bg-red-600 dark:bg-red-700 p-2 px-5 text-white font-exo hover:bg-red-700 dark:hover:bg-red-800 transition-all"
       >
         APPLY
-      </button>
+      </a>
       <button
         type="button"
         class={classNames(
@@ -196,14 +196,14 @@
         {page.name}
       </a>
     {/each}
-    <button
-      class="rounded-md bg-gray-300 dark:bg-gray-700 p-3 px-4 text-gray-500 dark:text-gray-400 font-exo cursor-not-allowed"
-      type="button"
-      disabled
-      title="Applications not open yet"
+    <a
+      href="https://jinshuju.com/f/vgsP3G?code=051ybDkl2H0Tjf4c71ml2Nk8cA2ybDk4"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rounded-md bg-red-600 dark:bg-red-700 p-3 px-4 text-white font-exo hover:bg-red-700 dark:hover:bg-red-800 transition-all"
     >
       APPLY
-    </button>
+    </a>
     <button
       type="button"
       class="mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800"
