@@ -51,7 +51,7 @@
       name: "Kathryn",
       role: "Sophomore",
       focus: "CS",
-      bio: "I'm Kathryn, a sophomore at Harvard studying Computer Science. I previously interned as a Software Engineer at Amazon and am actively involved with Harvard's Women in Computer Science. I'm also part of WECode (Women Engineers Code), the world's largest student-run undergraduate tech conference organized by undergraduate women at Harvard University.",
+      bio: "Hi, I'm Kathryn, a sophomore at Harvard studying Computer Science. This summer, I’m excited to be heading back to Amazon for my second software engineering internship! I have experience developing a CubeSat for a NASA-sponsored mission, applying machine learning to public health research, and teaching algorithms. I love creating cool projects across different fields and connecting with people who are just as excited about innovation as I am!",
       image: "/team/Kathryn.jpg"
     },
     {
