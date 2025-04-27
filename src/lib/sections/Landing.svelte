@@ -28,7 +28,6 @@
       <h1 class="font-lexend text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 tracking-tighter drop-shadow-lg">
         HackHarvard
       </h1>
-      
       <h2 class="font-exo text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 sm:mb-12 drop-shadow-md">
         October 2025 · Cambridge, MA
       </h2>
@@ -58,21 +57,25 @@
         </div>
       </div>
       
-      <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-center">
-        <a 
-          href="/what" 
-          target="_blank"
-          class="bg-white text-black px-5 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
-        >
-          What is a hackathon?
-        </a>
-        
-        <a 
-          href="#welcome" 
-          class="bg-transparent border-2 border-white px-5 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl hover:bg-white hover:bg-opacity-20 transition-all transform hover:-translate-y-1"
-        >
-          Learn More
-        </a>
+      <div class="sm:flex-col gap-4">
+        <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-center">
+          <a 
+            href="/what" 
+            target="_blank"
+            class="bg-white text-black px-5 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
+          >
+            What is a hackathon?
+          </a>
+          
+          <a 
+            href="#welcome" 
+            class="bg-transparent border-2 border-white px-5 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl hover:bg-white hover:bg-opacity-20 transition-all transform hover:-translate-y-1"
+          >
+            Learn More
+          </a>
+        </div>
+
+        <h2>Hosted by HackHarvard Undergraduate Hackathon</h2>
       </div>
     </div>
   </div>
