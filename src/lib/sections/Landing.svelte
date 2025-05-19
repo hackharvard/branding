@@ -28,21 +28,21 @@
   >
     <div class="mx-auto max-w-6xl text-center" style="transform: translateY({-scrollY * 0.08}px);">
       <h1
-        class="mb-4 font-lexend text-5xl font-bold tracking-tighter drop-shadow-lg sm:mb-6 sm:text-6xl md:text-7xl lg:text-8xl"
+        class="font-lexend mb-4 text-5xl font-bold tracking-tighter drop-shadow-lg sm:mb-6 sm:text-6xl md:text-7xl lg:text-8xl"
       >
         HackHarvard
       </h1>
 
       <p
-        class="mb-4 font-exo text-sm font-normal text-gray-300 drop-shadow-sm sm:mb-6 sm:text-base md:text-lg lg:text-xl"
+        class="font-exo mb-4 text-sm font-normal text-gray-300 drop-shadow-sm sm:mb-6 sm:text-base md:text-lg lg:text-xl"
       >
         Hosted by HackHarvard Undergraduate Hackathon
       </p>
 
       <h2
-        class="mb-8 font-exo text-xl font-semibold drop-shadow-md sm:mb-12 sm:text-2xl md:text-3xl lg:text-4xl"
+        class="font-exo mb-8 text-xl font-semibold drop-shadow-md sm:mb-12 sm:text-2xl md:text-3xl lg:text-4xl"
       >
-        October 2025 · Cambridge, MA
+        October 3-5, 2025 · Cambridge, MA
       </h2>
 
       <!-- Photo Accent Bar - responsive for mobile -->
