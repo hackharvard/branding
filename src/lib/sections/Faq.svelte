@@ -3,7 +3,7 @@
 </script>
 
 <div class="bg-white dark:bg-gray-900">
-  <div class="p-dynamic bg-color flex justify-center bg-faq bg-cover" id="faq">
+  <div class="p-dynamic bg-color bg-faq flex justify-center bg-cover" id="faq">
     <div class="w-full max-w-3xl rounded-lg bg-white p-8 shadow-lg dark:bg-black">
       <div>
         <h1 class="font-exo text-4xl uppercase text-red-700 sm:text-5xl">FAQ</h1>
@@ -34,7 +34,7 @@
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">When is HackHarvard?</svelte:fragment>
-            <svelte:fragment slot="content">October 2025. Exact date TBD.</svelte:fragment>
+            <svelte:fragment slot="content">October 3-5, 2025.</svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">How much does HackHarvard cost?</svelte:fragment>
@@ -100,9 +100,7 @@
           <h3 class="font-exo text-2xl text-red-700 sm:text-3xl">APPLY</h3>
           <Disclosure>
             <svelte:fragment slot="title">When is the application deadline?</svelte:fragment>
-            <svelte:fragment slot="content">
-              Deadlines are TBD.
-            </svelte:fragment>
+            <svelte:fragment slot="content">Deadlines are TBD.</svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">Am I eligible to apply?</svelte:fragment>
@@ -133,9 +131,7 @@
           </Disclosure>
         </div>
         <div class="space-y-4">
-          <h3 class="font-exo text-2xl uppercase text-red-700 sm:text-3xl">
-            Hackathon
-          </h3>
+          <h3 class="font-exo text-2xl uppercase text-red-700 sm:text-3xl">Hackathon</h3>
           <Disclosure>
             <svelte:fragment slot="title">What are tracks?</svelte:fragment>
             <svelte:fragment slot="content">
