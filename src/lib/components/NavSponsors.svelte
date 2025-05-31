@@ -1,6 +1,5 @@
 <script>
   import { classNames } from '$lib/utils'
-  import { page } from '$app/stores'
   import { onMount } from 'svelte'
   import Brand from './Brand.svelte'
   import { navigating } from '$app/stores'
@@ -14,21 +13,9 @@
 
   let shadow = false
   let open = false
-  $: hash = $page.url.hash
   $: if ($navigating) {
     open = false
   }
-  const pages = [
-    { name: 'HOME', href: '#home' },
-    {
-      name: 'ABOUT',
-      href: '#welcome'
-    },
-    {
-      name: 'FAQ',
-      href: '#faq'
-    }
-  ]
   function updateShadow() {
     shadow = window.scrollY !== 0
   }
@@ -36,13 +23,6 @@
     theme.toggle()
   }
 
-  function scrollToSection(event, href) {
-    event.preventDefault()
-    const element = document.querySelector(href)
-    element.scrollIntoView({
-      behavior: 'smooth'
-    })
-  }
 </script>
 
 <svelte:window on:scroll={updateShadow} />
@@ -56,56 +36,6 @@
   <Brand />
   <div class="flex items-center">
     <div class="hidden items-center gap-4 lg:flex">
-      {#each pages as page}
-        <a
-          class={classNames(
-            'font-exo rounded-md px-3 py-2 transition-all',
-            hash === page.href
-              ? shadow 
-                ? 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-gray-800' 
-                : 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-white/10'
-              : shadow 
-                ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                : 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10'
-          )}
-          href={page.href}
-          on:click={event => scrollToSection(event, page.href)}
-        >
-          {page.name}
-        </a>
-      {/each}
-      <!-- Sponsors Page Link-->
-      <a
-        href="/sponsors"
-        class={classNames(
-          'font-exo rounded-md px-3 py-2 transition-all',
-          shadow 
-            ? 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-gray-800' 
-            : 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-white/10'
-        )}
-      >
-        SPONSORS
-      </a>
-      <!-- China Page Link -->
-      <a
-        href="/china"
-        class={classNames(
-          'font-exo rounded-md px-3 py-2 transition-all',
-          shadow 
-            ? 'text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-800'
-            : 'text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-white/10'
-        )}
-      >
-        CHINA
-      </a>
-      <button
-        class="ml-2 rounded-md bg-gray-300 dark:bg-gray-700 p-2 px-5 text-gray-500 dark:text-gray-400 font-exo cursor-not-allowed"
-        type="button"
-        disabled
-        title="Applications not open yet"
-      >
-        APPLY
-      </button>
       <button
         type="button"
         class={classNames(
@@ -173,38 +103,6 @@
     class="p-dynamic fixed left-0 top-20 z-50 flex h-[calc(100vh-5rem)] w-screen flex-col gap-4 bg-white dark:bg-gray-900 lg:hidden"
     transition:fade
   >
-    {#each pages as page}
-      <a
-        class={classNames(
-          'font-exo rounded-md px-4 py-3 transition-all',
-          hash === page.href
-            ? 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-gray-800'
-            : 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-        )}
-        href={page.href}
-        on:click={event => {
-          scrollToSection(event, page.href)
-          open = false
-        }}
-      >
-        {page.name}
-      </a>
-    {/each}
-    <!-- China Page Link for mobile -->
-    <a
-      href="/china"
-      class="font-exo rounded-md px-4 py-3 transition-all text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-800"
-    >
-      CHINA
-    </a>
-    <button
-      class="rounded-md bg-gray-300 dark:bg-gray-700 p-3 px-4 text-gray-500 dark:text-gray-400 font-exo cursor-not-allowed"
-      type="button"
-      disabled
-      title="Applications not open yet"
-    >
-      APPLY
-    </button>
     <button
       type="button"
       class="mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800"
