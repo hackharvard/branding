@@ -523,7 +523,6 @@
               <li>JavaScript Essentials I</li>
               <li>JavaScript Essentials II</li>
               <li>Front-end Development Fundamentals</li>
-              <li>Creative Coding with P5.js</li>
             </ul>
             
             <!-- Development Tools -->
