@@ -19,7 +19,7 @@
     open = false
   }
   const pages = [
-    { name: 'HOME', href: '#home' },
+    { name: 'HOME', href: '/' },
     {
       name: 'ABOUT',
       href: '#welcome'
@@ -50,7 +50,9 @@
   transition:slide={{ x: 0, y: -100, duration: 300 }}
   class={classNames(
     'px-dynamic fixed left-0 top-0 z-50 flex h-20 w-full items-center justify-between transition-all',
-    shadow ? 'bg-white/95 backdrop-blur-sm shadow-sm dark:bg-gray-900/95 border-b border-gray-200 dark:border-gray-800' : 'bg-transparent'
+    shadow
+      ? 'border-b border-gray-200 bg-white/95 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/95'
+      : 'bg-transparent'
   )}
 >
   <Brand />
@@ -61,12 +63,12 @@
           class={classNames(
             'font-exo rounded-md px-3 py-2 transition-all',
             hash === page.href
-              ? shadow 
-                ? 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-gray-800' 
-                : 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-white/10'
-              : shadow 
-                ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                : 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10'
+              ? shadow
+                ? 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
+                : 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10'
+              : shadow
+              ? 'text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
+              : 'text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10'
           )}
           href={page.href}
           on:click={event => scrollToSection(event, page.href)}
@@ -79,9 +81,9 @@
         href="/sponsors"
         class={classNames(
           'font-exo rounded-md px-3 py-2 transition-all',
-          shadow 
-            ? 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-gray-800' 
-            : 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-white/10'
+          shadow
+            ? 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
+            : 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10'
         )}
       >
         SPONSORS
@@ -91,15 +93,15 @@
         href="/china"
         class={classNames(
           'font-exo rounded-md px-3 py-2 transition-all',
-          shadow 
-            ? 'text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-800'
-            : 'text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-white/10'
+          shadow
+            ? 'text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-800'
+            : 'text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-white/10'
         )}
       >
         CHINA
       </a>
       <button
-        class="ml-2 rounded-md bg-gray-300 dark:bg-gray-700 p-2 px-5 text-gray-500 dark:text-gray-400 font-exo cursor-not-allowed"
+        class="font-exo ml-2 cursor-not-allowed rounded-md bg-gray-300 p-2 px-5 text-gray-500 dark:bg-gray-700 dark:text-gray-400"
         type="button"
         disabled
         title="Applications not open yet"
@@ -109,8 +111,8 @@
       <button
         type="button"
         class={classNames(
-          'flex h-9 w-9 items-center justify-center rounded-full ml-2',
-          shadow 
+          'ml-2 flex h-9 w-9 items-center justify-center rounded-full',
+          shadow
             ? 'bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700'
             : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-black/30 dark:text-white dark:hover:bg-black/40'
         )}
@@ -144,7 +146,7 @@
     <button
       class={classNames(
         'ml-3 flex h-9 w-9 items-center justify-center rounded-md lg:hidden',
-        shadow 
+        shadow
           ? 'bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700'
           : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-black/30 dark:text-white dark:hover:bg-black/40'
       )}
@@ -178,8 +180,8 @@
         class={classNames(
           'font-exo rounded-md px-4 py-3 transition-all',
           hash === page.href
-            ? 'text-gray-800 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-gray-800'
-            : 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+            ? 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
+            : 'text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
         )}
         href={page.href}
         on:click={event => {
@@ -193,12 +195,12 @@
     <!-- China Page Link for mobile -->
     <a
       href="/china"
-      class="font-exo rounded-md px-4 py-3 transition-all text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+      class="font-exo rounded-md px-4 py-3 text-red-600 transition-all hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-800"
     >
       CHINA
     </a>
     <button
-      class="rounded-md bg-gray-300 dark:bg-gray-700 p-3 px-4 text-gray-500 dark:text-gray-400 font-exo cursor-not-allowed"
+      class="font-exo cursor-not-allowed rounded-md bg-gray-300 p-3 px-4 text-gray-500 dark:bg-gray-700 dark:text-gray-400"
       type="button"
       disabled
       title="Applications not open yet"

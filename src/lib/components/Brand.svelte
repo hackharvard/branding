@@ -1,6 +1,6 @@
 <div>
   <div
-    class="inline-flex items-center gap-2 rounded-md border border-gray-200 p-2 dark:border-secondary"
+    class="dark:border-secondary inline-flex items-center gap-2 rounded-md border border-gray-200 p-2"
   >
     <a
       id="mlh-trust-badge"
@@ -13,7 +13,7 @@
         style="width:100%"
       /></a
     >
-    <a class="shrink-0" href="/#home">
+    <a class="shrink-0" href="/">
       <img class="ms-24 h-10" src="/logo.svg" alt="" />
     </a>
   </div>
