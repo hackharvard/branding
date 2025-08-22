@@ -61,7 +61,7 @@
       {#each pages as page}
         <a
           class={classNames(
-            'font-exo rounded-md px-3 py-2 transition-all',
+            'rounded-md px-3 py-2 font-exo transition-all',
             hash === page.href
               ? shadow
                 ? 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
@@ -80,7 +80,7 @@
       <a
         href="/sponsors"
         class={classNames(
-          'font-exo rounded-md px-3 py-2 transition-all',
+          'rounded-md px-3 py-2 font-exo transition-all',
           shadow
             ? 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
             : 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10'
@@ -92,7 +92,7 @@
       <a
         href="/china"
         class={classNames(
-          'font-exo rounded-md px-3 py-2 transition-all',
+          'rounded-md px-3 py-2 font-exo transition-all',
           shadow
             ? 'text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-800'
             : 'text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-white/10'
@@ -100,14 +100,14 @@
       >
         CHINA
       </a>
-      <button
-        class="font-exo ml-2 cursor-not-allowed rounded-md bg-gray-300 p-2 px-5 text-gray-500 dark:bg-gray-700 dark:text-gray-400"
-        type="button"
-        disabled
-        title="Applications not open yet"
+      <a
+        href="https://portal.hackharvard.io"
+        target="_blank"
+        class="ml-2 rounded-md bg-red-600 p-2 px-5 font-exo text-white hover:bg-red-400 dark:bg-red-600 dark:hover:bg-red-400"
+        rel="noopener noreferrer"
       >
         APPLY
-      </button>
+      </a>
       <button
         type="button"
         class={classNames(
@@ -178,7 +178,7 @@
     {#each pages as page}
       <a
         class={classNames(
-          'font-exo rounded-md px-4 py-3 transition-all',
+          'rounded-md px-4 py-3 font-exo transition-all',
           hash === page.href
             ? 'font-medium text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
             : 'text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800'
@@ -195,18 +195,18 @@
     <!-- China Page Link for mobile -->
     <a
       href="/china"
-      class="font-exo rounded-md px-4 py-3 text-red-600 transition-all hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-800"
+      class="rounded-md px-4 py-3 font-exo text-red-600 transition-all hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-800"
     >
       CHINA
     </a>
-    <button
-      class="font-exo cursor-not-allowed rounded-md bg-gray-300 p-3 px-4 text-gray-500 dark:bg-gray-700 dark:text-gray-400"
-      type="button"
-      disabled
-      title="Applications not open yet"
+    <a
+      href="https://portal.hackharvard.io"
+      target="_blank"
+      class="ml-2 rounded-md bg-red-600 p-2 px-5 font-exo text-white hover:bg-red-400 dark:bg-red-600 dark:hover:bg-red-400"
+      rel="noopener noreferrer"
     >
       APPLY
-    </button>
+    </a>
     <button
       type="button"
       class="mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800"
