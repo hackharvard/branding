@@ -45,6 +45,13 @@
         October 3-5, 2025 · Cambridge, MA
       </h2>
 
+      <!-- Early Application Notice -->
+      <div class="mb-8 rounded-lg bg-white bg-opacity-20 p-4 backdrop-blur-sm sm:mb-12 sm:p-6">
+        <p class="font-exo text-base font-medium text-white drop-shadow-sm sm:text-lg md:text-xl">
+          🚀 <strong>Applications are now open!</strong> Rolling decisions will begin September 1st, so submit your application early to secure your spot.
+        </p>
+      </div>
+
       <!-- Photo Accent Bar - responsive for mobile -->
       <div class="my-8 flex flex-wrap justify-center gap-4 sm:my-12 sm:flex-nowrap sm:space-x-6">
         <div
