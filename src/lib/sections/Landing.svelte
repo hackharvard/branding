@@ -26,7 +26,7 @@
   >
     <div class="mx-auto max-w-6xl text-center" style="transform: translateY({-scrollY * 0.08}px);">
       <h1
-        class="font-lexend mb-4 text-5xl font-bold tracking-tighter drop-shadow-lg sm:mb-6 sm:text-6xl md:text-7xl lg:text-8xl"
+        class="font-lexend mt-10 mb-4 text-5xl font-bold tracking-tighter drop-shadow-lg sm:mb-6 sm:text-6xl md:text-7xl lg:text-8xl"
       >
         HackHarvard
       </h1>
