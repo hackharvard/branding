@@ -1,5 +1,4 @@
 <script>
-  import Marquee from '$lib/components/Marquee.svelte'
   import { theme } from '$lib/stores'
 </script>
 

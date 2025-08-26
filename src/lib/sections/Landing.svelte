@@ -1,6 +1,4 @@
 <script>
-  import Marquee from '../components/Marquee.svelte'
-
   // For parallax scrolling effect
   let scrollY
 
@@ -104,10 +102,6 @@
     </div>
   </div>
 
-  <!-- Marquee at bottom -->
-  <div class="absolute bottom-0 left-0 right-0">
-    <Marquee theme="light" />
-  </div>
 </div>
 
 <style>
