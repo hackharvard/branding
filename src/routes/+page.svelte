@@ -1,12 +1,8 @@
 <script>
-  import Applications from '$lib/sections/Applications.svelte'
   import Faq from '$lib/sections/Faq.svelte'
   import Landing from '$lib/sections/Landing.svelte'
-  import Speakers from '$lib/sections/Speakers.svelte'
   import Tracks from '$lib/sections/Tracks.svelte'
   import WelcomeNew from '$lib/sections/WelcomeNew.svelte'
-  import Sponsors from '$lib/sections/Sponsors.svelte'
-  import Hype from '../lib/sections/Hype.svelte'
   import '../app.css'
   import Footer from '$lib/components/Footer.svelte'
   import Nav from '$lib/components/Nav.svelte'
