@@ -11,7 +11,6 @@
     <h1 class="px-dynamic font-exo text-5xl uppercase text-violet-700 dark:text-white sm:text-7xl">
       APPLICATIONS
     </h1>
-    <Marquee />
     <a
       class="pressable px-dynamic inline-block rounded-full bg-red-600 px-6 py-2 font-exo text-3xl uppercase text-white transition-colors before:bg-secondary hover:bg-red-500 sm:px-8 sm:py-3 sm:text-4xl md:px-10 md:py-4 md:text-6xl"
       href="https://portal.hackharvard.io"
