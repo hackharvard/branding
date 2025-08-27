@@ -190,11 +190,11 @@
         <button 
           type="button"
           class="inline-block bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105"
-          on:click={toggleModal}
+          on:click={() => window.location.href = "https://portal.hackharvard.io"}
           on:keydown={(e) => e.key === 'Enter' && toggleModal()}
           aria-haspopup="dialog"
         >
-          Notify me when applications open
+          Apply now
         </button>
       </div>
 

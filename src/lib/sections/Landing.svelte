@@ -8,25 +8,24 @@
 
 <svelte:window bind:scrollY />
 
-<div class="relative min-h-screen overflow-hidden" id="home">
+<div class="relative min-h-screen" id="home">
   <!-- Parallax Hero Background -->
   <div class="absolute inset-0 h-full w-full overflow-hidden">
     <img
       src={featuredImagePath}
       alt="HackHarvard"
-      class="absolute h-full w-full scale-125 transform object-cover object-center transition-transform duration-500"
-      style="transform: translateY({scrollY * 0.15}px) scale(1.25);"
+      class="absolute h-full w-full object-cover object-center"
     />
     <div class="absolute inset-0 bg-black bg-opacity-50" />
   </div>
 
   <!-- Hero Content -->
   <div
-    class="relative flex h-screen flex-col items-center justify-center px-4 py-10 text-white sm:px-6 sm:py-20"
+    class="relative flex min-h-screen flex-col items-center px-4 py-16 text-white sm:px-6 sm:py-24"
   >
-    <div class="mx-auto max-w-6xl text-center" style="transform: translateY({-scrollY * 0.08}px);">
+    <div class="mx-auto max-w-6xl text-center">
       <h1
-        class="font-lexend mt-10 sm:mt-40 mb-4 text-5xl font-bold tracking-tighter drop-shadow-lg sm:mb-6 sm:text-6xl md:text-7xl lg:text-8xl"
+        class="font-lexend mt-10 sm:mt-20 mb-4 text-5xl font-bold tracking-tighter drop-shadow-lg sm:mb-6 sm:text-6xl md:text-7xl lg:text-8xl"
       >
         HackHarvard
       </h1>
