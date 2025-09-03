@@ -100,7 +100,7 @@
           <h3 class="font-exo text-2xl text-red-700 sm:text-3xl">APPLY</h3>
           <Disclosure>
             <svelte:fragment slot="title">When is the application deadline?</svelte:fragment>
-            <svelte:fragment slot="content">Deadlines are TBD.</svelte:fragment>
+            <svelte:fragment slot="content">The early application deadline was August 31, 2025. The regular application deadline is September 14, 2025.</svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">Am I eligible to apply?</svelte:fragment>
