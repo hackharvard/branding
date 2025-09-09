@@ -67,8 +67,7 @@
           <Disclosure>
             <svelte:fragment slot="title">How do I get to HackHarvard?</svelte:fragment>
             <svelte:fragment slot="content">
-              Our venue is located at the Science and Engineering Complex, 150 Western Ave, Boston,
-              MA 02134. HackHarvard does not provide transport, so participants will have to make
+              Our venue is located at the Student Organization Center at Hilles, 59 Shepard St, Cambridge, MA 02138. HackHarvard does not provide transport, so participants will have to make
               their own travel plans.
             </svelte:fragment>
           </Disclosure>
@@ -89,10 +88,10 @@
           <Disclosure>
             <svelte:fragment slot="title">How does an in-person hackathon work?</svelte:fragment>
             <svelte:fragment slot="content">
-              Located at Harvard’s Science and Engineering Complex (SEC), HackHarvard will provide
+              Located at Harvard’s Student Organization Center at Hilles (SOCH), HackHarvard will provide
               food for all meals from Friday’s dinner to Sunday's breakfast. We will try our best to
               accommodate all dietary restrictions. Hackers will also be provided spaces to sleep in
-              the SEC.
+              the SOCH.
             </svelte:fragment>
           </Disclosure>
         </div>
