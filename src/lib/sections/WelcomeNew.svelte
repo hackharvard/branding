@@ -73,7 +73,7 @@
       });
       
       // Since no-cors doesn't give us response details, we assume success
-      successMessage = 'Thank you! We\'ll notify you when applications open.';
+      successMessage = 'Thank you! Applications are closed — we hope you had a great time. We\'ll share updates about future events.';
       firstName = '';
       lastName = '';
       email = '';
@@ -189,12 +189,11 @@
         </p>
         <button 
           type="button"
-          class="inline-block bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105"
-          on:click={() => window.location.href = "https://portal.hackharvard.io"}
-          on:keydown={(e) => e.key === 'Enter' && toggleModal()}
-          aria-haspopup="dialog"
+          class="inline-block bg-white/40 text-gray-100 cursor-default font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 transform"
+          aria-disabled="true"
+          disabled
         >
-          Apply now
+          Applications Closed
         </button>
       </div>
 
@@ -246,7 +245,7 @@
               {successMessage}
             </div>
           {:else}
-            <p class="mb-4 dark:text-gray-300">Enter your information below to be notified when applications for HackHarvard 2025 open.</p>
+            <p class="mb-4 dark:text-gray-300">Enter your information below to receive updates about future HackHarvard events.</p>
             
             <form on:submit|preventDefault={handleSubmit}>
               <div class="mb-4">

@@ -153,14 +153,12 @@
         >
           Learn More
         </a>
-        <a 
-          href="https://jinshuju.com/f/vgsP3G" 
-          class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-bold text-lg shadow-xl hover:bg-white hover:bg-opacity-20 transition-all transform hover:-translate-y-1"
-          target="_blank" 
-          rel="noopener noreferrer"
+        <span 
+          class="bg-transparent border-2 border-white text-white/70 px-6 py-3 rounded-lg font-bold text-lg shadow-xl transition-all cursor-default"
+          aria-hidden="true"
         >
-          Apply Now
-        </a>
+          Applications Closed
+        </span>
       </div>
     </div>
   </div>
@@ -589,14 +587,12 @@
           and create something amazing together.
         </p>
         <div class="flex justify-center">
-          <a 
-            href="https://jinshuju.com/f/vgsP3G" 
-            class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-gray-100 transition-all transform hover:scale-105"
-            target="_blank" 
-            rel="noopener noreferrer"
+          <span 
+            class="bg-white/40 text-gray-800 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform cursor-default"
+            aria-hidden="true"
           >
-            Apply Now
-          </a>
+            Applications Closed
+          </span>
         </div>
       </div>
     </section>

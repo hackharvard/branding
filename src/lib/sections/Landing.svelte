@@ -45,7 +45,7 @@
       <!-- Early Application Notice -->
       <div class="mb-8 rounded-lg bg-white bg-opacity-20 p-4 backdrop-blur-sm sm:mb-12 sm:p-6">
         <p class="font-exo text-base font-medium text-white drop-shadow-sm sm:text-lg md:text-xl">
-          🚀 <strong>Applications are now open!</strong> Rolling decisions will begin September 1st, so submit your application early to secure your spot.
+          🚀 <strong>Applications are now closed.</strong> Thank you to everyone who applied — we hope you had a great time at the event.
         </p>
       </div>
 

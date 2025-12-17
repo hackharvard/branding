@@ -41,8 +41,7 @@
           <p>
             HackHarvard is a 36-hour undergraduate hackathon hosted at Harvard University. 
             Every year, over 700 students from around the world come to our campus to build, 
-            learn, and create. Applications for our 10th iteration of HackHarvard will open
-            in mid 2025.
+            learn, and create. Applications are now closed — thank you to everyone who applied; we hope you had a great time at the event.
           </p>
         </div>
       </div>
