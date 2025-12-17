@@ -88,18 +88,42 @@
       >
         SPONSORS
       </a>
-      <!-- China Page Link -->
-      <a
-        href="/china"
-        class={classNames(
-          'rounded-md px-3 py-2 font-exo transition-all',
-          shadow
-            ? 'text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-800'
-            : 'text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-white/10'
-        )}
-      >
-        CHINA
-      </a>
+      <!-- International dropdown -->
+      <div class="relative group">
+        <button
+          class={classNames(
+            'rounded-md px-3 py-2 font-exo transition-all text-left',
+            shadow
+              ? 'font-medium text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-800'
+              : 'font-medium text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-white/10'
+          )}
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          INTERNATIONAL
+        </button>
+
+        <div
+          class="invisible absolute right-0 mt-2 w-40 transform rounded-md bg-white py-1 shadow-lg opacity-0 transition-all group-hover:visible group-hover:opacity-100 dark:bg-gray-800"
+          role="menu"
+          aria-label="International"
+        >
+          <a
+            href="/china"
+            class="block px-4 py-2 font-exo text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+            role="menuitem"
+          >
+            CHINA
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1P7PkhxhnTS4_NUaMsWmm9DgmTnQ_uKGl/view"
+            class="block px-4 py-2 font-exo text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+            role="menuitem"
+          >
+            INDIA
+          </a>
+        </div>
+      </div>
       <a
         href="https://portal.hackharvard.io"
         target="_blank"
@@ -192,13 +216,24 @@
         {page.name}
       </a>
     {/each}
-    <!-- China Page Link for mobile -->
-    <a
-      href="/china"
-      class="rounded-md px-4 py-3 font-exo text-red-600 transition-all hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-800"
-    >
-      CHINA
-    </a>
+    <!-- International links for mobile -->
+    <div class="px-4">
+      <div class="mb-1 text-sm font-exo font-medium text-red-600 dark:text-red-400">INTERNATIONAL</div>
+      <a
+        href="/china"
+        class="block rounded-md px-4 py-3 font-exo text-gray-800 transition-all hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
+        on:click={() => (open = false)}
+      >
+        CHINA
+      </a>
+      <a
+        href="/india"
+        class="mt-1 block rounded-md px-4 py-3 font-exo text-gray-800 transition-all hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
+        on:click={() => (open = false)}
+      >
+        INDIA
+      </a>
+    </div>
     <a
       href="https://portal.hackharvard.io"
       target="_blank"
