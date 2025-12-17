@@ -11,7 +11,10 @@
 
   let ready = false
   onMount(() => {
-    theme.toggle()
+    // Set default dark only when user hasn't chosen a theme yet
+    if (typeof localStorage !== 'undefined' && !localStorage.getItem('theme')) {
+      theme.set('dark')
+    }
     ready = true
   })
 

@@ -116,7 +116,7 @@
             CHINA
           </a>
           <a
-            href="https://drive.google.com/file/d/1P7PkhxhnTS4_NUaMsWmm9DgmTnQ_uKGl/view"
+            href="/india"
             class="block px-4 py-2 font-exo text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
             role="menuitem"
           >
