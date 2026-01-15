@@ -122,6 +122,13 @@
           >
             INDIA
           </a>
+          <a
+            href="/vietnam"
+            class="block px-4 py-2 font-exo text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+            role="menuitem"
+          >
+            VIETNAM
+          </a>
         </div>
       </div>
       <a
