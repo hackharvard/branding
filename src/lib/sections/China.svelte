@@ -13,60 +13,53 @@
   
   const teamMembers = [
     {
-      name: "Jerry",
+      name: "Luna Yin",
       role: "Sophomore",
-      focus: "Physics & Math",
-      bio: "Hey everyone, my name is Jerry and I'm a sophomore at Harvard studying physics and math. Most of my research experience has been in computational physics and chemistry so feel free to reach out if you have any questions about modeling, data analysis, optimization, or simulation. Outside of science, I'm also interested in policy, economics, history, and geopolitics.",
-      image: "/team/Jerry.jpg"
+      focus: "Environmental Science & CS",
+      bio: "Hi! I’m Luna and I’m a sophomore at Harvard studying environmental science and engineering. My research focuses on measuring and modeling greenhouse gas emissions using remote sensors on airplanes and satellites. I have a strong background in environmental science, data analysis, and app development. I also work with environmental policy and entrepreneurship from my involvement in business consulting. Come chat with me if you’re interested in anything related to environmental technology!",
+      image: "/team/luna-yin.jpg"
     },
     {
-      name: "Sahana",
-      role: "Sophomore",
-      focus: "Statistics & CS",
-      bio: "Hi! My name is Sahana and I am a sophomore at Harvard studying statistics and computer science. I have technical experience in iOS app development, web design, and biostatistical modeling, and business experience in e-commerce and marketing. I've taken coursework in data science and entrepreneurship!",
-      image: "/team/Sahana.JPG"
-    },
-    {
-      name: "Hugo",
+      name: "Neeraja Kumar",
       role: "Junior",
-      focus: "Mathematics",
-      bio: "Hi, I am Hugo, a junior at Harvard studying mathematics. I have worked the previous two summers in financial technologies, leveraging Python and C# in data science and data engineering applications. I have a passion for both analyzing and engineering data, having taken various courses in machine learning and data science.",
-      image: "/team/Hugo.jpg"
+      focus: "Government & South Asian Studies",
+      bio: "Hi! I am a junior studying government and South Asian studies with a focus on the intersection of historical government systems and poetry. Outside of this, I also am co-president of Women in Entreprenurship where I encourage and run events related to female entrepreneurship. I have competed in a few hackathons myself, focusing on the building and prototyping part of projects. I previously was on the Marketing Team for HackHarvard 2025, volunteered with HackHarvard Turkey, and am so excited to be helping with HackHarvard China this year!",
+      image: "/team/neeraja-kumar.jpg"
     },
     {
-      name: "Ivan",
+      name: "Jen Guo",
       role: "Sophomore",
-      focus: "CS & Applied Math",
-      bio: "I’m Ivan, a sophomore at Harvard studying Computer Science and Applied Mathematics. I’ve spent the last few years exploring CS and education, and have been on staff for CS50, one of the largest massive online open courses in the world, teaching students Python, C, SQL, HTML/CSS/Javascript, and Flask. I’m also an Algorithm Team Lead for Datamatch, a college matchmaking service used by over 16,000 students nationwide. Talk to me about ethical data science or data privacy!",
-      image: "/team/Ivan.jpg"
+      focus: "Applied Math in Economics",
+      bio: "Hi! I'm Jen, a sophomore at Harvard studying Applied Mathematics on the Economics track, with a strong interest in business strategy, data, and economics. I've done economics research—especially development economics—and have explored these interests through research on global investment and infrastructure projects. Outside of class I'm also interested in learning languages, traveling, and politics.",
+      image: "/team/jen-guo.jpeg"
     },
     {
-      name: "Yuen Ler",
-      role: "Senior",
+      name: "Michelle Weon",
+      role: "Sophomore",
       focus: "CS & Statistics",
-      bio: "I'm Yuen Ler, a senior at Harvard studying Computer Science and Statistics. Hacking is my life—I've competed in nine hackathons so far and won prizes at four of them! I'm also currently co-founder of Finterview, a startup providing AI-driven technical interview screening for finance companies. After graduation, I'll be joining Amazon as a Software Engineer. Always happy to chat about startups, hacking, or anything tech!",
-      image: "/team/Yuen Ler.jpeg"
+      bio: "Hello! I am a sophomore at Harvard College studying computer science and statistics and the Director of Hacker Experience at HackHarvard. My past experience specialized in AI research for neurodegenerative disease diagnostics, specifically ML algorithms to diagnose Parkinson’s severity, and software engineering for aerospace modeling programs. I currently love building for early stage startups ranging from edtech to fintech and doing research for robotics and AI safety. I’m comfortable with developing full-stack and producing end-to-end products, so come talk to me about anything during the hackathon. I am excited to meet everyone!",
+      image: "/team/michelle-weon.png"
     },
     {
-      name: "Kathryn",
-      role: "Sophomore",
-      focus: "CS",
-      bio: "Hi, I'm Kathryn, a sophomore at Harvard studying Computer Science. This summer, I’m excited to be heading back to Amazon for my second software engineering internship! I have experience developing a CubeSat for a NASA-sponsored mission, applying machine learning to public health research, and teaching algorithms. I love creating cool projects across different fields and connecting with people who are just as excited about innovation as I am!",
-      image: "/team/Kathryn.jpg"
+      name: "Kelly Olmos",
+      role: "Junior",
+      focus: "Applied Math & Statistics",
+      bio: "Hi, my name is Kelly and I'm a junior at Harvard studying Applied Math and Statistics. My experience spans applied AI research, political data science and election forecasting, and full-stack product development. I'm interested in entrepreneurship and startups as well. On the technical side, talk to me about data modeling, statistical analysis, and ML pipelines.",
+      image: "/team/kelly-olmos.png"
     },
     {
-      name: "Jen",
-      role: "First-Year",
-      focus: "Applied Math & Economics",
-      bio: "I'm Jen and I'm a first-year studying Applied Math and Economics. I'm currently involved with research, policy work, and consulting on campus as I'm interested in learning more about challenges in economic development and public policy. I also grew up being involved in running my parents' business so I would be happy to chat about businesses and marketing.",
-      image: "/team/Jen.jpeg"
+      name: "Eric Gong",
+      role: "Junior",
+      focus: "Computer Science",
+      bio: "Hey everyone! I’m Eric, a Junior at Harvard studying Computer Science, while dabbling in Philosophy on the side. I’m currently a researcher with the Harvard Kennedy School, examining the applications of AI in the polling industry, and political policy at large! Outside of courses I enjoy hiking and exploring the great outdoors!",
+      image: "/team/eric-gong.jpg"
     },
     {
-      name: "Luna",
-      role: "First-Year",
-      focus: "Environmental Engineering",
-      bio: "Hi! I’m Luna and I’m a first-year environmental engineering student at Harvard. My passions are sustainability, technology, and entrepreneurship! I was a two-time semifinalist in the international Technovation Challenge for app development and tech entrepreneurship. I’m also an analyst at Harvard Undergraduate Consulting on Business and the Environment, where I advise tech and engineering companies about sustainable strategies.",
-      image: "/team/Luna.jpg"
+      name: "Yurui Zi",
+      role: "Junior",
+      focus: "Rationality & Decision Theory",
+      bio: "Hi everyone, my name is Yurui, and I’m a junior at Harvard College. I study a self-designed concentration called Rationality and Decision Theory, which explores the foundations of how both human and artificial minds reason and make judgments under uncertainty. I conduct research at the Kempner Institute for the Study of Natural and Artificial Intelligence on decision making through a meta-Bayesian lens. Outside of research, I’m active in the technology startup ecosystem as a VC Scout at Andreessen Horowitz (a16z), where I invest in high-conviction pre-seed companies. Feel free to ask me about storytelling and pitching, refining your ideas, prediction markets, and problem framing!",
+      image: "/team/yurui-zi.jpg"
     }
   ];
   
@@ -204,17 +197,20 @@
 
     <!-- Team Section -->
     <section class="mb-24" id="team">
-      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">MEET THE TEAM</h2>
+      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">
+        MEET THE TEAM
+      </h2>
       
       <div class="mx-auto max-w-5xl">
         <p class="text-lg mb-8 text-center text-gray-700 dark:text-gray-300">
           Our team of Harvard students is excited to bring HackHarvard to China and foster collaborative innovation.
         </p>
         
-        <!-- Top row (4 team members) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center mb-12">
-          {#each teamMembers.slice(0, 4) as member, i (member.name)}
-            <div class="flex flex-col items-center text-center">
+        <!-- Unified flex layout -->
+        <div class="flex flex-wrap justify-center gap-8">
+          {#each teamMembers as member, i (member.name)}
+            <div class="flex flex-col items-center text-center w-full sm:w-[45%] md:w-[22%] max-w-[160px]">
+              
               <button 
                 class="group relative w-32 h-32 rounded-full overflow-hidden transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 mx-auto"
                 on:click={() => activeModal = i}
@@ -225,34 +221,18 @@
                   class="w-full h-full object-cover" 
                 />
                 <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                  <span class="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Bio</span>
+                  <span class="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    View Bio
+                  </span>
                 </div>
               </button>
-              <h3 class="mt-4 text-lg font-bold text-black dark:text-white">{member.name}</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 text-center">{member.role} • {member.focus}</p>
-            </div>
-          {/each}
-        </div>
-        
-        <!-- Bottom row (4 team members) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-          {#each teamMembers.slice(4) as member, i (member.name)}
-            <div class="flex flex-col items-center text-center">
-              <button 
-                class="group relative w-32 h-32 rounded-full overflow-hidden transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 mx-auto"
-                on:click={() => activeModal = i + 4}
-              >
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  class="w-full h-full object-cover" 
-                />
-                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                  <span class="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Bio</span>
-                </div>
-              </button>
-              <h3 class="mt-4 text-lg font-bold text-black dark:text-white">{member.name}</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 text-center">{member.role} • {member.focus}</p>
+
+              <h3 class="mt-4 text-lg font-bold text-black dark:text-white">
+                {member.name}
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+                {member.role} • {member.focus}
+              </p>
             </div>
           {/each}
         </div>
