@@ -1,5 +1,48 @@
 <script>
-  import Disclosure from '../components/Disclosure.svelte'
+  import Disclosure from '../components/Disclosure.svelte';
+
+  const faqItems = [
+    {
+      question: 'What is HackHarvard China?',
+      answer:
+        'HackHarvard China is a collaborative hackathon experience designed to inspire middle and high school students to build innovative solutions and explore technology through workshops, teamwork, and project development.'
+    },
+    {
+      question: 'When is HackHarvard China?',
+      answer:
+        'HackHarvard China will take place from August 19–23, 2026 in Hangzhou. The program features a 5-day event including 2 days of workshops and a 36-hour hackathon. Students can choose whether to register for the 2-day workshops.'
+    },
+    {
+      question: 'Where will HackHarvard China take place?',
+      answer:
+        'HackHarvard China will take place in Hangzhou. The specific venue details will be provided to all registered participants prior to the event.'
+    },
+    {
+      question: 'Is HackHarvard China in-person?',
+      answer:
+        'Yes. HackHarvard China is an in-person event, and participants will need to be physically present at the venue.'
+    },
+    {
+      question: 'What if I have never hacked before?',
+      answer:
+        'That is okay. The first two days include beginner-level workshops designed to help students build confidence and prepare for the hackathon.'
+    },
+    {
+      question: 'Who can participate?',
+      answer:
+        'Participants may register in one of two divisions: Junior High School Division (Grades 8–9) and Senior High School Division (Grades 10–12).'
+    },
+    {
+      question: 'Do I have to attend the workshops?',
+      answer:
+        'No. Students may choose whether to attend the 2-day workshop portion or compete directly in the hackathon.'
+    },
+    {
+      question: 'What is the format of the event?',
+      answer:
+        'The event begins with registration, the opening ceremony, and team building on August 19. Workshops take place on August 20 and August 21, and the hackathon begins on the evening of August 21. The program concludes on August 23 with the hackathon fair, presentations, and closing ceremony.'
+    }
+  ];
 </script>
 
 <div class="bg-white dark:bg-gray-900">
@@ -11,66 +54,22 @@
           What if my question is not here?
         </p>
         <p class="text-sm text-gray-700 dark:text-gray-300">
-          Please email us at <a class="text-blue-900 hover:underline dark:text-blue-200" href="mailto:china@hackharvard.io"
-            >china@hackharvard.io</a
-          >
+          Please email us at
+          <a class="text-blue-900 hover:underline dark:text-blue-200" href="mailto:china@hackharvard.io">
+            china@hackharvard.io
+          </a>
           and we'll get back to you ASAP!
         </p>
       </div>
+
       <div class="mt-8 space-y-6">
         <div class="space-y-4">
-          <Disclosure>
-            <svelte:fragment slot="title">What is HackHarvard China?</svelte:fragment>
-            <svelte:fragment slot="content">
-              HackHarvard China is the HackHarvard China Challenge, a collaborative initiative bringing Harvard University's premier hackathon experience to students in China. It aims to empower middle and high school students to develop innovative solutions to global challenges through computer science, with mentorship from industry leaders and academic mentors.
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">When is HackHarvard China?</svelte:fragment>
-            <svelte:fragment slot="content">HackHarvard China will take place from August 25-29, 2025 in Shanghai. The program features a 5-day event including workshops and a 96-hour hackathon.</svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">Where will HackHarvard take place?</svelte:fragment>
-            <svelte:fragment slot="content">
-              HackHarvard China will take place in Shanghai. The specific venue details will be provided to all registered participants prior to the event.
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">Is HackHarvard China in-person?</svelte:fragment>
-            <svelte:fragment slot="content">
-              Yes, HackHarvard China is an in-person event with an online preparatory course package. Participants will need to be physically present at the venue.
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">What if I have never hacked before?</svelte:fragment>
-            <svelte:fragment slot="content">
-              That's okay! HackHarvard China offers beginner workshops specifically designed to help you dive into the world of hacking. There will be plenty of other introductory hackers and it'll be a great opportunity to learn.
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">How does team work?</svelte:fragment>
-            <svelte:fragment slot="content">
-              Each team consists of 2-5 members. All team members must collaborate to complete and submit one project.
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">What if I don't have a team?</svelte:fragment>
-            <svelte:fragment slot="content">
-              If you do not have a team yet, don't worry. There will be several events and communications channels geared towards facilitating team formation and project ideation. We will help you find people to work with!
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">Will there be prizes?</svelte:fragment>
-            <svelte:fragment slot="content">
-              Yes! We will be giving away certificate of participation and swag to all participants who submit a project, as well as exciting prizes to all winning projects.
-            </svelte:fragment>
-          </Disclosure>
-          <Disclosure>
-            <svelte:fragment slot="title">Is there a code of conduct?</svelte:fragment>
-            <svelte:fragment slot="content">
-              All participants are expected to follow the HackHarvard Code of Conduct throughout the duration of the event. This ensures a safe, respectful, and inclusive environment for everyone. A PDF of this code of conduct will be made available soon.
-            </svelte:fragment>
-          </Disclosure>
+          {#each faqItems as item}
+            <Disclosure>
+              <svelte:fragment slot="title">{item.question}</svelte:fragment>
+              <svelte:fragment slot="content">{item.answer}</svelte:fragment>
+            </Disclosure>
+          {/each}
         </div>
       </div>
     </div>
