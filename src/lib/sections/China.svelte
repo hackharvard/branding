@@ -248,7 +248,7 @@
 
 <div class="relative h-[70vh] w-full overflow-hidden">
   <img
-    src="/HHCC 2025 Photos/6H4A9012-opq3938684948.jpg"
+    src="/hhcc-2025-photos/6H4A9012-opq3938684948.jpg"
     alt={siteContent.event.name}
     class="absolute h-full w-full object-cover object-center transform transition-transform duration-500"
     style="transform: translateY({scrollY * 0.15}px);"
@@ -319,10 +319,10 @@
           For more details, contact us at <a href={`mailto:${siteContent.event.contactEmail}`} class="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300">{displayValue(siteContent.event.contactEmail)}</a>.
         </p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-          <img src="/HHCC 2025 Photos/6H4A8346-opq3938371465.jpg" alt="Students presenting their project" class="w-full h-48 object-cover rounded-xl shadow-md" />
-          <img src="/HHCC 2025 Photos/6H4A7728-opq3937681256.jpg" alt="Mentors helping a team" class="w-full h-48 object-cover rounded-xl shadow-md" />
-          <img src="/HHCC 2025 Photos/6H4A5243-opq3934441521.jpg" alt="Students working on laptops" class="w-full h-48 object-cover rounded-xl shadow-md" />
-          <img src="/HHCC 2025 Photos/6H4A9871-opq3932202593.jpg" alt="Mentor guiding students" class="w-full h-48 object-cover rounded-xl shadow-md" />
+          <img src="/hhcc-2025-photos/6H4A8346-opq3938371465.jpg" alt="Students presenting their project" class="w-full h-48 object-cover rounded-xl shadow-md" />
+          <img src="/hhcc-2025-photos/6H4A7728-opq3937681256.jpg" alt="Mentors helping a team" class="w-full h-48 object-cover rounded-xl shadow-md" />
+          <img src="/hhcc-2025-photos/6H4A5243-opq3934441521.jpg" alt="Students working on laptops" class="w-full h-48 object-cover rounded-xl shadow-md" />
+          <img src="/hhcc-2025-photos/6H4A9871-opq3932202593.jpg" alt="Mentor guiding students" class="w-full h-48 object-cover rounded-xl shadow-md" />
         </div>
       </div>
     </section>
@@ -428,7 +428,7 @@
     </section>
 
     <div class="mb-24 -mx-6 overflow-hidden rounded-2xl shadow-lg">
-      <img src="/HHCC 2025 Photos/6H4A9112-opq3931583475.jpg" alt="HackHarvard China Challenge" class="w-full h-64 md:h-80 object-cover" />
+      <img src="/hhcc-2025-photos/6H4A9112-opq3931583475.jpg" alt="HackHarvard China Challenge" class="w-full h-64 md:h-80 object-cover" />
     </div>
 
     <section class="mb-24" id="workshops">
@@ -459,7 +459,7 @@
     </section>
 
     <div class="mb-24 -mx-6 overflow-hidden rounded-2xl shadow-lg">
-      <img src="/HHCC 2025 Photos/6H4A8729-opq3938610977.jpg" alt="HackHarvard China awards and medals" class="w-full h-64 md:h-80 object-cover" />
+      <img src="/hhcc-2025-photos/6H4A8729-opq3938610977.jpg" alt="HackHarvard China awards and medals" class="w-full h-64 md:h-80 object-cover" />
     </div>
 
     <section class="mb-24" id="faq">
