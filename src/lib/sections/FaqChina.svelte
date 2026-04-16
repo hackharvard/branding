@@ -5,12 +5,12 @@
     {
       question: 'What is HackHarvard China?',
       answer:
-        'HackHarvard China is a collaborative hackathon experience designed to inspire middle and high school students to build innovative solutions and explore technology through workshops, teamwork, and project development.'
+        'HackHarvard China is a collaborative hackathon experience designed to inspire middle school, high school, and university students to build innovative solutions and explore technology through workshops, teamwork, and project development.'
     },
     {
       question: 'When is HackHarvard China?',
       answer:
-        'HackHarvard China will take place from August 19–23, 2026 in Hangzhou. The program features a 5-day event including 2 days of workshops and a 36-hour hackathon. Students can choose whether to register for the 2-day workshops.'
+        'HackHarvard China will take place from August 21–23, 2026 in Hangzhou. The program features a 3-day hackathon event with optional pre-event workshops. Students can choose whether to attend the workshops.'
     },
     {
       question: 'Where will HackHarvard China take place?',
@@ -25,22 +25,22 @@
     {
       question: 'What if I have never hacked before?',
       answer:
-        'That is okay. The first two days include beginner-level workshops designed to help students build confidence and prepare for the hackathon.'
+        'That is okay. Pre-event beginner-level workshops are available to help students build confidence and prepare for the hackathon.'
     },
     {
       question: 'Who can participate?',
       answer:
-        'Participants may register in one of two divisions: Junior High School Division (Grades 8–9) and Senior High School Division (Grades 10–12).'
+        'Participants may register in one of three divisions: Junior High School Division (Grades 8–9), Senior High School Division (Grades 10–12), and University Student Division. This year\u2019s HackHarvard China Challenge will include a university student division with separate evaluation and awarding.'
     },
     {
       question: 'Do I have to attend the workshops?',
       answer:
-        'No. Students may choose whether to attend the 2-day workshop portion or compete directly in the hackathon.'
+        'No. Students may choose whether to attend the pre-event workshop portion or compete directly in the hackathon.'
     },
     {
       question: 'What is the format of the event?',
       answer:
-        'The event begins with registration, the opening ceremony, and team building on August 19. Workshops take place on August 20 and August 21, and the hackathon begins on the evening of August 21. The program concludes on August 23 with the hackathon fair, presentations, and closing ceremony.'
+        'The event begins with registration, the opening ceremony, and team building on August 21. The hackathon runs through August 22, and the program concludes on August 23 with the hackathon fair, presentations, and closing ceremony.'
     }
   ];
 </script>

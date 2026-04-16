@@ -26,13 +26,14 @@
       city: 'Hangzhou',
       venue: null,
       contactEmail: 'china@hackharvard.io',
-      applicationStatus: 'soon', // options: 'open', 'closed', 'soon'
-      dateRangeLabel: 'August 19–23, 2026',
-      workshopHackathonSummary: '2 days of beginner-level workshops followed by a 36-hour hackathon'
+      applicationStatus: 'open', // options: 'open', 'closed', 'soon'
+      dateRangeLabel: 'August 21–23, 2026',
+      workshopHackathonSummary: 'a 36-hour hackathon with optional pre-event workshops'
     },
     divisions: [
       'Junior High School Division (Grades 8–9)',
-      'Senior High School Division (Grades 10–12)'
+      'Senior High School Division (Grades 10–12)',
+      'University Student Division'
     ],
     tracks: [
       {
@@ -62,37 +63,52 @@
         description:
           'Developing cities today need well-connected infrastructure and smart sensing in order to serve residents efficiently. How can we use sensors and digital tools to make cities more interconnected? This track focuses on projects that aim to automate and improve city infrastructure. Examples include traffic sensors, transportation innovations, solar panel charging, and more!',
         color: 'bg-purple-500'
+      },
+      {
+        title: 'Mysterious Track',
+        icon: '❓',
+        description: 'To be announced on-site.',
+        color: 'bg-gray-500'
       }
     ],
     workshops: {
       intro:
-        'The first two days of the program feature beginner-friendly workshops designed to help students build confidence before the hackathon begins. Students can choose whether to attend these workshops or compete directly in the hackathon.',
-      categories: [],
+        'Pre-event beginner-friendly workshops are available to help students build confidence before the hackathon begins. Students can choose whether to attend these workshops or compete directly in the hackathon.',
+      categories: [
+        {
+          title: 'Technical Workshops',
+          items: [
+            'Intro to Python',
+            'Intro to Javascript',
+            'Front-End Development',
+            'How to Use GitHub',
+            'Coding with AI',
+            'High-Level Intro to AI Tech'
+          ]
+        },
+        {
+          title: 'Business & Product Workshops',
+          items: [
+            'Brand/Business Development',
+            'What is an MVP?'
+          ]
+        }
+      ],
     },
     scheduleDays: [
       {
         dayNumber: 1,
-        title: 'Day 1: Wednesday, August 19',
-        items: ['Registration', 'Opening Ceremony', 'Ice-Breaking & Team Building']
+        title: 'Day 1: Thursday, August 21',
+        items: ['Registration', 'Opening Ceremony', 'Ice-Breaking & Team Building', 'Hackathon begins']
       },
       {
         dayNumber: 2,
-        title: 'Day 2: Thursday, August 20',
-        items: ['Workshops']
-      },
-      {
-        dayNumber: 3,
-        title: 'Day 3: Friday, August 21',
-        items: ['Workshops', 'Hackathon starts in the evening']
-      },
-      {
-        dayNumber: 4,
-        title: 'Day 4: Saturday, August 22',
+        title: 'Day 2: Friday, August 22',
         items: ['Hackathon']
       },
       {
-        dayNumber: 5,
-        title: 'Day 5: Sunday, August 23',
+        dayNumber: 3,
+        title: 'Day 3: Saturday, August 23',
         items: ['Hackathon Fair', 'Presentations', 'Closing Ceremony']
       }
     ]
@@ -167,7 +183,7 @@
 
   function applicationStatusLabel(status) {
     const labels = {
-      open: 'Applications Open',
+      open: 'Register Now',
       closed: 'Applications Closed',
       soon: 'Opening Soon'
     };
@@ -232,7 +248,7 @@
 
 <div class="relative h-[70vh] w-full overflow-hidden">
   <img
-    src="/nice_photos/Copy of 606A9181.jpg"
+    src="/HHCC 2025 Photos/6H4A9012-opq3938684948.jpg"
     alt={siteContent.event.name}
     class="absolute h-full w-full object-cover object-center transform transition-transform duration-500"
     style="transform: translateY({scrollY * 0.15}px);"
@@ -256,12 +272,14 @@
         >
           Learn More
         </a>
-        <span
-          class="bg-transparent border-2 border-white text-white/70 px-6 py-3 rounded-lg font-bold text-lg shadow-xl transition-all cursor-default"
-          aria-hidden="true"
+        <a
+          href="https://jinshuju.com/f/aHsacU"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-bold text-lg shadow-xl transition-all hover:bg-white hover:text-black transform hover:-translate-y-1"
         >
           {applicationStatusLabel(siteContent.event.applicationStatus)}
-        </span>
+        </a>
       </div>
     </div>
   </div>
@@ -278,24 +296,34 @@
         </p>
 
         <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
+          We are thrilled to partner with <span class="font-semibold">High Leap Education (合励教育)</span> to host this year's HackHarvard China Challenge. Together, we aim to inspire and empower the next generation of innovators to create impactful solutions for a better future.
+        </p>
+
+        <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
           The <span class="font-semibold">HackHarvard China Challenge</span> will take place <span class="font-semibold">{displayValue(siteContent.event.dateRangeLabel)}</span> in <span class="font-semibold">{displayValue(siteContent.event.city)}</span>, with the specific venue <span class="font-semibold">{displayValue(siteContent.event.venue, 'to be announced')}</span>. This year’s theme is <span class="font-semibold">{displayValue(siteContent.event.theme)}</span>.
         </p>
 
         <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
-          The program features a <span class="font-semibold">5-day event</span> including <span class="font-semibold">{displayValue(siteContent.event.workshopHackathonSummary)}</span>. Students may choose whether to attend the workshop portion or compete directly in the hackathon.
+          The program features a <span class="font-semibold">3-day event</span> including <span class="font-semibold">{displayValue(siteContent.event.workshopHackathonSummary)}</span>. Students may choose whether to attend the workshop portion or compete directly in the hackathon.
         </p>
 
         <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
-          Participants may register in one of two divisions: <span class="font-semibold">{displayValue(siteContent.divisions?.[0])}</span> and <span class="font-semibold">{displayValue(siteContent.divisions?.[1])}</span>.
+          Participants may register in one of three divisions: <span class="font-semibold">{displayValue(siteContent.divisions?.[0])}</span>, <span class="font-semibold">{displayValue(siteContent.divisions?.[1])}</span>, and <span class="font-semibold">{displayValue(siteContent.divisions?.[2])}</span>. The university student division will have separate evaluation and awarding.
         </p>
 
         <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
-          Teams will build projects across four challenge areas: education, safety, sustainability, and smart cities. Throughout the program, participants will learn new technical skills, collaborate with peers, and present their ideas at the final hackathon fair.
+          Teams will build projects across five challenge areas: education, safety, sustainability, smart cities, and a mysterious track to be announced on-site. Throughout the program, participants will learn new technical skills, collaborate with peers, and present their ideas at the final hackathon fair.
         </p>
 
         <p class="text-lg text-gray-700 dark:text-gray-300">
           For more details, contact us at <a href={`mailto:${siteContent.event.contactEmail}`} class="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300">{displayValue(siteContent.event.contactEmail)}</a>.
         </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+          <img src="/HHCC 2025 Photos/6H4A8346-opq3938371465.jpg" alt="Students presenting their project" class="w-full h-48 object-cover rounded-xl shadow-md" />
+          <img src="/HHCC 2025 Photos/6H4A7728-opq3937681256.jpg" alt="Mentors helping a team" class="w-full h-48 object-cover rounded-xl shadow-md" />
+          <img src="/HHCC 2025 Photos/6H4A5243-opq3934441521.jpg" alt="Students working on laptops" class="w-full h-48 object-cover rounded-xl shadow-md" />
+          <img src="/HHCC 2025 Photos/6H4A9871-opq3932202593.jpg" alt="Mentor guiding students" class="w-full h-48 object-cover rounded-xl shadow-md" />
+        </div>
       </div>
     </section>
 
@@ -337,7 +365,7 @@
 
       <div class="mx-auto max-w-5xl">
         <p class="text-lg mb-8 text-center text-gray-700 dark:text-gray-300">
-          Choose from one of our four challenge tracks for your project. Click on each track to learn more.
+          Choose from one of our five challenge tracks for your project. Click on each track to learn more.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -364,11 +392,11 @@
 
       <div class="mx-auto max-w-5xl">
         <p class="text-lg mb-8 text-center text-gray-700 dark:text-gray-300">
-          The first two days feature beginner-level workshops, followed by a 36-hour hackathon.
+          Pre-event workshops are available before the hackathon, followed by a 36-hour hackathon.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {#each siteContent.scheduleDays.slice(0, 4) as day}
+          {#each siteContent.scheduleDays.slice(0, 2) as day}
             <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md">
               <h3 class="font-exo text-xl font-bold mb-4 text-black dark:text-white flex items-center">
                 <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">{day.dayNumber}</span>
@@ -386,11 +414,11 @@
         <div class="mt-8 flex justify-center">
           <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md w-full md:w-[calc(50%-1rem)]">
             <h3 class="font-exo text-xl font-bold mb-4 text-black dark:text-white flex items-center">
-              <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">{siteContent.scheduleDays[4].dayNumber}</span>
-              {siteContent.scheduleDays[4].title}
+              <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">{siteContent.scheduleDays[2].dayNumber}</span>
+              {siteContent.scheduleDays[2].title}
             </h3>
             <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-              {#each normalizedItems(siteContent.scheduleDays[4].items) as item}
+              {#each normalizedItems(siteContent.scheduleDays[2].items) as item}
                 <li class="flex items-start"><span class="text-red-500 mr-2">•</span><span>{item}</span></li>
               {/each}
             </ul>
@@ -398,6 +426,10 @@
         </div>
       </div>
     </section>
+
+    <div class="mb-24 -mx-6 overflow-hidden rounded-2xl shadow-lg">
+      <img src="/HHCC 2025 Photos/6H4A9112-opq3931583475.jpg" alt="HackHarvard China Challenge" class="w-full h-64 md:h-80 object-cover" />
+    </div>
 
     <section class="mb-24" id="workshops">
       <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">WORKSHOPS</h2>
@@ -426,6 +458,10 @@
       </div>
     </section>
 
+    <div class="mb-24 -mx-6 overflow-hidden rounded-2xl shadow-lg">
+      <img src="/HHCC 2025 Photos/6H4A8729-opq3938610977.jpg" alt="HackHarvard China awards and medals" class="w-full h-64 md:h-80 object-cover" />
+    </div>
+
     <section class="mb-24" id="faq">
       <FaqChina />
     </section>
@@ -434,15 +470,17 @@
       <div class="bg-gradient-to-r from-blue-500 to-red-500 rounded-3xl shadow-lg p-16 text-center">
         <h2 class="font-exo text-4xl font-bold mb-6 text-white">JOIN US IN {displayValue(siteContent.event.city).toUpperCase()}!</h2>
         <p class="text-xl max-w-3xl mx-auto mb-10 text-white/90 leading-relaxed">
-          Join a 5-day program of workshops, collaboration, and a 36-hour hackathon as students build solutions for tomorrow’s world.
+          Join a 3-day program of collaboration and a 36-hour hackathon as students build solutions for tomorrow’s world.
         </p>
         <div class="flex justify-center">
-          <span
-            class="bg-white/40 text-gray-800 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform cursor-default"
-            aria-hidden="true"
+          <a
+            href="https://jinshuju.com/f/aHsacU"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white text-gray-800 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform hover:-translate-y-1 hover:shadow-2xl"
           >
             {applicationStatusLabel(siteContent.event.applicationStatus)}
-          </span>
+          </a>
         </div>
       </div>
     </section>

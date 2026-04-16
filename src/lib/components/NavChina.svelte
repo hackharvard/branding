@@ -105,7 +105,7 @@
         </a>
       {/each}
       <a
-        href="https://jinshuju.com/f/vgsP3G?code=051ybDkl2H0Tjf4c71ml2Nk8cA2ybDk4"
+        href="https://jinshuju.com/f/aHsacU"
         target="_blank"
         rel="noopener noreferrer"
         class="ml-2 rounded-md bg-red-600 dark:bg-red-700 p-2 px-5 text-white font-exo hover:bg-red-700 dark:hover:bg-red-800 transition-all"
@@ -197,7 +197,7 @@
       </a>
     {/each}
     <a
-      href="https://jinshuju.com/f/vgsP3G?code=051ybDkl2H0Tjf4c71ml2Nk8cA2ybDk4"
+      href="https://jinshuju.com/f/aHsacU"
       target="_blank"
       rel="noopener noreferrer"
       class="rounded-md bg-red-600 dark:bg-red-700 p-3 px-4 text-white font-exo hover:bg-red-700 dark:hover:bg-red-800 transition-all"
