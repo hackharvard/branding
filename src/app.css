@@ -65,20 +65,17 @@
   .landing-text-light {
     background-color: pink;
     color: transparent;
-    text-shadow: 4px 4px 2px #6FEEFF, 3px 3px 3px pink;
+    text-shadow: 4px 4px 2px #6feeff, 3px 3px 3px pink;
     -webkit-background-clip: text;
-    -webkit-text-stroke: 2px #FFFFFF;
+    -webkit-text-stroke: 2px #ffffff;
   }
   .landing-text-dark {
     background-color: pink;
     color: transparent;
-    text-shadow: 4px 4px 2px #D80034, 3px 3px 3px pink;
+    text-shadow: 4px 4px 2px #d80034, 3px 3px 3px pink;
     -webkit-background-clip: text;
-    -webkit-text-stroke: 2px #E44A9E;
+    -webkit-text-stroke: 2px #e44a9e;
   }
-  
-
-
 }
 
 .link {

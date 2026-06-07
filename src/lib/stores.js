@@ -28,7 +28,11 @@ function createTheme() {
       if (typeof document !== 'undefined') {
         if (next === 'dark') document.documentElement.classList.add('dark')
         else document.documentElement.classList.remove('dark')
-        try { localStorage.setItem('theme', next) } catch(e) {}
+        try {
+          localStorage.setItem('theme', next)
+        } catch (e) {
+          // Ignore storage failures in private/incognito mode
+        }
       }
       return next
     })
@@ -40,7 +44,11 @@ function createTheme() {
     if (typeof document !== 'undefined') {
       if (value === 'dark') document.documentElement.classList.add('dark')
       else document.documentElement.classList.remove('dark')
-      try { localStorage.setItem('theme', value) } catch(e) {}
+      try {
+        localStorage.setItem('theme', value)
+      } catch (e) {
+        // Ignore storage failures in private/incognito mode
+      }
     }
   }
 

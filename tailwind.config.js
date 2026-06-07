@@ -2,16 +2,13 @@
 const colors = require('tailwindcss/colors')
 
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ['./index.html', './src/**/*.{html,js,jsx,ts,tsx,svelte}'],
   darkMode: 'class',
   theme: {
     fontFamily: {
       lato: ['Lato', 'sans-serif'],
       exo: ['Exo', 'sans-serif'],
-      lexend: [
-        'Lexend',
-        'sans-serif',
-      ]
+      lexend: ['Lexend', 'sans-serif']
     },
     extend: {
       colors: {
@@ -45,7 +42,7 @@ export default {
       backgroundImage: {
         'welcome-dark': "url('/images/sections/welcome-dark.jpg')",
         'welcome-light': "url('/images/sections/welcome-light.svg')",
-        'faq': "url('/images/sections/faq.svg')",
+        faq: "url('/images/sections/faq.svg')",
         'applications-light': "url('/images/sections/applications-light.svg')",
         'applications-dark': "url('/images/sections/applications-dark.svg')"
       }

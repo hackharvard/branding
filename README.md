@@ -1,11 +1,13 @@
 # Running Locally
 
 First, move into the `src/` directory.
+
 ```bash
 $ cd src
 ```
 
 Now run `npm install` and `npm run dev`.
+
 ```bash
 src/ $ npm install
 src/ $ npm run dev
