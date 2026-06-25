@@ -158,11 +158,11 @@
       image: '/team/eric-gong.jpg'
     },
     {
-      name: 'Yurui Zi',
-      role: 'Junior',
-      focus: 'Rationality & Decision Theory',
-      bio: 'Hi everyone, my name is Yurui, and I’m a junior at Harvard College. I study a self-designed concentration called Rationality and Decision Theory, which explores the foundations of how both human and artificial minds reason and make judgments under uncertainty. I conduct research at the Kempner Institute for the Study of Natural and Artificial Intelligence on decision making through a meta-Bayesian lens. Outside of research, I’m active in the technology startup ecosystem as a VC Scout at Andreessen Horowitz (a16z), where I invest in high-conviction pre-seed companies. Feel free to ask me about storytelling and pitching, refining your ideas, prediction markets, and problem framing!',
-      image: '/team/yurui-zi.jpg'
+      name: 'Anh',
+      role: 'Sophomore',
+      focus: 'Computer Science & Economics',
+      bio: 'Hi! I’m Anh, a sophomore at Harvard studying computer science and economics. I’ve built two companies, including Plate Tale, an AI-powered marketplace that helps home chefs sell meals without needing to open their own restaurants, and an education startup focused on tutoring and college counseling. My experience spans entrepreneurship, business strategy, and app development, with a strong interest in building technology-driven communities for social impact. Come chat with me if you’re interested in startups, AI, or tech entrepreneurship!',
+      image: '/team/anh.jpg'
     }
   ];
 

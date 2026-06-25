@@ -79,7 +79,7 @@
             This is a place where the brightest young minds come together to create innovative technological solutions to global challenges.
             </p>
             <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
-            <span class="font-semibold">HackHarvard USA</span> will take place <span class="font-semibold">October 3-5, 2025</span> in 
+            <span class="font-semibold">HackHarvard USA</span> will take place <span class="font-semibold">October 16-18, 2026</span> in 
             Cambridge, Massachusetts at the Science and Engineering Complex, bringing together talented undergraduates with industry leaders 
             and academic mentors. Our program features a variety of workshops where competitors can learn more about your organization along with others that are innovating
             across domains including healthcare, sustainability, education, and social impact.

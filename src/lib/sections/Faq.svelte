@@ -34,7 +34,7 @@
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">When is HackHarvard?</svelte:fragment>
-            <svelte:fragment slot="content">October 3-5, 2025.</svelte:fragment>
+            <svelte:fragment slot="content">October 16-18, 2026.</svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">How much does HackHarvard cost?</svelte:fragment>
@@ -90,8 +90,8 @@
             <svelte:fragment slot="content">
               Located at Harvard’s Student Organization Center at Hilles (SOCH), HackHarvard will provide
               food for all meals from Friday’s dinner to Sunday's breakfast. We will try our best to
-              accommodate all dietary restrictions. Hackers will also be provided spaces to sleep in
-              the SOCH.
+              accommodate all dietary restrictions. Please note that there will be no overnight accommodations
+              this year — participants will need to arrange their own lodging.
             </svelte:fragment>
           </Disclosure>
         </div>
@@ -99,7 +99,7 @@
           <h3 class="font-exo text-2xl text-red-700 sm:text-3xl">APPLY</h3>
           <Disclosure>
             <svelte:fragment slot="title">When is the application deadline?</svelte:fragment>
-            <svelte:fragment slot="content">The early application deadline was August 31, 2025. The regular application deadline is September 14, 2025.</svelte:fragment>
+            <svelte:fragment slot="content">Application deadlines for HackHarvard 2026 will be announced soon. Stay tuned!</svelte:fragment>
           </Disclosure>
           <Disclosure>
             <svelte:fragment slot="title">Am I eligible to apply?</svelte:fragment>

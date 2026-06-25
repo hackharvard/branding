@@ -39,13 +39,19 @@
       <h2
         class="font-exo mb-8 text-xl font-semibold drop-shadow-md sm:mb-12 sm:text-2xl md:text-3xl lg:text-4xl"
       >
-        October 3-5, 2025 · Cambridge, MA
+        October 16-18, 2026 · Cambridge, MA
       </h2>
 
-      <!-- Early Application Notice -->
-      <div class="mb-8 rounded-lg bg-white bg-opacity-20 p-4 backdrop-blur-sm sm:mb-12 sm:p-6">
-        <p class="font-exo text-base font-medium text-white drop-shadow-sm sm:text-lg md:text-xl">
-          🚀 <strong>Applications are now closed.</strong> Thank you to everyone who applied — we hope you had a great time at the event.
+      <!-- 2026 Announcement Banner -->
+      <div class="mb-8 rounded-lg bg-white bg-opacity-20 p-4 backdrop-blur-sm sm:mb-12 sm:p-6 space-y-2">
+        <p class="font-exo text-base font-semibold text-white drop-shadow-sm sm:text-lg md:text-xl">
+          <strong>HackHarvard 2026 — October 16-18, Cambridge, MA</strong>
+        </p>
+        <p class="font-exo text-sm text-white/90 drop-shadow-sm sm:text-base md:text-lg">
+          Applications will be open soon — stay tuned!
+        </p>
+        <p class="font-exo text-sm text-white/90 drop-shadow-sm sm:text-base md:text-lg">
+          Please note: there will be no overnight accommodations this year. Participants will need to arrange their own lodging.
         </p>
       </div>
 

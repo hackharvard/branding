@@ -136,7 +136,7 @@
             learn, and create.
           </p>
           <p class="text-lg dark:text-gray-300">
-            Applications for our 10th iteration of HackHarvard will open in mid 2025. Join us for an unforgettable
+            Applications for HackHarvard 2026 will open soon — stay tuned! Join us for an unforgettable
             experience where you'll meet fellow innovators, work with cutting-edge technologies, and push the 
             boundaries of what's possible.
           </p>
@@ -162,7 +162,7 @@
         </div>
         <div class="bg-white dark:bg-gray-800 p-10 rounded-2xl shadow-xl transform transition-transform hover:scale-105">
           <div class="font-exo text-5xl font-bold mb-4 text-pink-600 dark:text-pink-400">10th</div>
-          <p class="text-xl dark:text-gray-300">Anniversary in 2025</p>
+          <p class="text-xl dark:text-gray-300">Anniversary in 2026</p>
         </div>
       </div>
 
@@ -183,7 +183,7 @@
       
       <!-- Join us section -->
       <div class="text-center bg-gradient-to-r from-blue-500 to-purple-500 p-16 rounded-3xl shadow-lg">
-        <h2 class="font-exo text-4xl font-bold mb-6 text-white">JOIN US IN 2025</h2>
+        <h2 class="font-exo text-4xl font-bold mb-6 text-white">JOIN US IN 2026</h2>
         <p class="text-xl max-w-3xl mx-auto mb-10 text-white/90 leading-relaxed">
           Be part of something extraordinary. Whether you are a seasoned hacker or just starting your coding journey, HackHarvard welcomes participants of all experience levels.
         </p>
