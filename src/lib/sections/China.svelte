@@ -98,17 +98,17 @@
     scheduleDays: [
       {
         dayNumber: 1,
-        title: 'Day 1: Thursday, August 21',
+        title: 'Day 1: Friday, August 21',
         items: ['Registration', 'Opening Ceremony', 'Ice-Breaking & Team Building', 'Hackathon begins']
       },
       {
         dayNumber: 2,
-        title: 'Day 2: Friday, August 22',
+        title: 'Day 2: Saturday, August 22',
         items: ['Hackathon']
       },
       {
         dayNumber: 3,
-        title: 'Day 3: Saturday, August 23',
+        title: 'Day 3: Sunday, August 23',
         items: ['Hackathon Fair', 'Presentations', 'Closing Ceremony']
       }
     ]
