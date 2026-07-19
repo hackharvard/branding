@@ -388,6 +388,14 @@
               requestAnimationFrame(updateHero);
             }
           }
+
+          function refreshAfterContentToggle() {
+            requestTick();
+            requestAnimationFrame(() => {
+              requestTick();
+              requestAnimationFrame(requestTick);
+            });
+          }
     
           function scrollToSceneSection(section) {
             if (window.matchMedia("(max-width: 900px)").matches) {
@@ -435,6 +443,11 @@
               history.replaceState(null, "", href);
             });
           });
+
+          const faqDetails = document.querySelectorAll(".faq-item");
+          faqDetails.forEach((details) => {
+            details.addEventListener("toggle", refreshAfterContentToggle);
+          });
     
           window.addEventListener("scroll", requestTick, { passive: true });
           window.addEventListener("resize", requestTick);
@@ -443,6 +456,9 @@
           updateHero();
     
           return () => {
+            faqDetails.forEach((details) => {
+              details.removeEventListener("toggle", refreshAfterContentToggle);
+            });
             window.removeEventListener("scroll", requestTick);
             window.removeEventListener("resize", requestTick);
           };
@@ -1441,10 +1457,7 @@
         }
 
         .planet-earth {
-          left: 50%;
-          top: -9vh;
-          width: min(84vw, 380px);
-          transform: translateX(-50%);
+          display: none;
         }
 
         .planet-jupiter,
@@ -1588,7 +1601,7 @@
         .tracks-scene {
           display: grid;
           place-items: center;
-          width: min(120vw, 640px);
+          width: min(100%, 640px);
           aspect-ratio: 16 / 9;
         }
 
