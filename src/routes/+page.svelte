@@ -632,7 +632,7 @@
                   <g id="logo-smoke-holes" filter="url(#logo-smoke-blur)"></g>
                 </mask>
               </defs>
-              <image href="/newsite/assets/Logo%20Stuff%20With%20Date.png" width="1728" height="742" preserveAspectRatio="xMidYMid meet" mask="url(#logo-smoke-mask)" />
+              <image href="/newsite/assets/logo-stuff-with-date.png" width="1728" height="742" preserveAspectRatio="xMidYMid meet" mask="url(#logo-smoke-mask)" />
             </svg>
           </div>
 
