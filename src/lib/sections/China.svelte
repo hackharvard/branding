@@ -116,13 +116,6 @@
 
   const teamMembers = [
     {
-      name: 'Joe Liang',
-      role: 'Sophomore',
-      focus: 'Computer Science & Physics',
-      bio: "Hi, I'm Joe, a sophomore at Harvard studying computer science and physics. I build simulations to study physical systems and use computation to solve practical problems. Currently I am applying these tools to automate the precise dispensing of solid chemicals in academic research labs.",
-      image: '/team/joe-liang.png'
-    },
-    {
       name: 'Luna Yin',
       role: 'Sophomore',
       focus: 'Environmental Science & CS',
@@ -170,6 +163,13 @@
       focus: 'Computer Science & Economics',
       bio: 'Hi! I’m Anh, a sophomore at Harvard studying computer science and economics. I’ve built two companies, including Plate Tale, an AI-powered marketplace that helps home chefs sell meals without needing to open their own restaurants, and an education startup focused on tutoring and college counseling. My experience spans entrepreneurship, business strategy, and app development, with a strong interest in building technology-driven communities for social impact. Come chat with me if you’re interested in startups, AI, or tech entrepreneurship!',
       image: '/team/anh.jpg'
+    },
+    {
+      name: 'Joe Liang',
+      role: 'Sophomore',
+      focus: 'Computer Science & Physics',
+      bio: "Hi, I'm Joe, a sophomore at Harvard studying computer science and physics. I build simulations to study physical systems and use computation to solve practical problems. Currently I am applying these tools to automate the precise dispensing of solid chemicals in academic research labs.",
+      image: '/team/joe-liang.png'
     }
   ];
 
