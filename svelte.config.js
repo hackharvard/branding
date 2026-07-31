@@ -42,7 +42,12 @@ import adapter from '@sveltejs/adapter-cloudflare';
 
 export default {
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      routes: {
+        include: ['/*'],
+        exclude: ['/_app/*', '/favicon.svg', '/logo.svg', '/logoForEmailNoBg.png', '/team/*', '/images/*', '/hhcc-2025-photos/*', '/nice_photos/*', '/newsite/*']
+      }
+    }),
   }
 };
 
