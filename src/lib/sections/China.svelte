@@ -120,7 +120,7 @@
       role: 'Sophomore',
       focus: 'Computer Science & Physics',
       bio: "Hi, I'm Joe, a sophomore at Harvard studying computer science and physics. I build simulations to study physical systems and use computation to solve practical problems. Currently I am applying these tools to automate the precise dispensing of solid chemicals in academic research labs.",
-      image: '/team/joe-liang.jpg'
+      image: '/team/joe-liang.png'
     }
   ];
 
