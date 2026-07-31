@@ -114,6 +114,16 @@
     ]
   };
 
+  const mentors = [
+    {
+      name: 'Joe Liang',
+      role: 'Sophomore',
+      focus: 'Computer Science & Physics',
+      bio: "Hi, I'm Joe, a sophomore at Harvard studying computer science and physics. I build simulations to study physical systems and use computation to solve practical problems. Currently I am applying these tools to automate the precise dispensing of solid chemicals in academic research labs.",
+      image: '/team/joe-liang.jpg'
+    }
+  ];
+
   const teamMembers = [
     {
       name: 'Luna Yin',
@@ -360,6 +370,39 @@
       </div>
     </section>
 
+    <section class="mb-24" id="mentors">
+      <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">
+        MEET THE MENTORS
+      </h2>
+
+      <div class="mx-auto max-w-5xl">
+        <p class="text-lg mb-8 text-center text-gray-700 dark:text-gray-300">
+          Our mentors are here to guide and support you throughout the hackathon.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-8">
+          {#each mentors as mentor, i (mentor.name)}
+            <div class="flex flex-col items-center text-center w-full sm:w-[45%] md:w-[22%] max-w-[160px]">
+              <button
+                class="group relative w-32 h-32 rounded-full overflow-hidden transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 mx-auto"
+                on:click={() => (activeModal = `mentor-${i}`)}
+              >
+                <img src={mentor.image} alt={mentor.name} class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                  <span class="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    View Bio
+                  </span>
+                </div>
+              </button>
+
+              <h3 class="mt-4 text-lg font-bold text-black dark:text-white">{mentor.name}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 text-center">{mentor.role} • {mentor.focus}</p>
+            </div>
+          {/each}
+        </div>
+      </div>
+    </section>
+
     <section class="mb-24" id="tracks">
       <h2 class="font-exo text-3xl font-bold mb-10 text-center text-black dark:text-white">TRACKS</h2>
 
@@ -507,6 +550,16 @@
     name={member.name}
     bio={member.bio}
     image={member.image}
+    on:click={closeTeamMemberModal}
+  />
+{/each}
+
+{#each mentors as mentor, i}
+  <TeamMemberModal
+    isOpen={activeModal === `mentor-${i}`}
+    name={mentor.name}
+    bio={mentor.bio}
+    image={mentor.image}
     on:click={closeTeamMemberModal}
   />
 {/each}
