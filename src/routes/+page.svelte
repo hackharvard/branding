@@ -569,7 +569,24 @@
               <section class="sponsors-section" id="sponsors" aria-labelledby="sponsors-title">
                 <div class="sponsors-scene">
                   <h2 class="section-title sponsors-title" id="sponsors-title">Sponsors</h2>
-                  <p class="sponsors-coming-soon">Coming Soon!</p>
+                  <div class="sponsors-logos">
+                    <a
+                      class="sponsor-logo sponsor-spacex"
+                      href="https://www.spacex.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src="/newsite/assets/logos/spacex.png" alt="SpaceX" draggable="false" />
+                    </a>
+                    <a
+                      class="sponsor-logo sponsor-marshall"
+                      href="https://www.mwam.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src="/newsite/assets/logos/marshall.png" alt="Marshall Wace" draggable="false" />
+                    </a>
+                  </div>
                 </div>
               </section>
 
@@ -1288,21 +1305,41 @@
         text-align: center;
       }
 
-      .sponsors-coming-soon {
-        display: grid;
-        place-items: center;
+      .sponsors-logos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(2.5rem, 7vw, 6.5rem);
         width: min(86%, 1120px);
         min-height: clamp(260px, 20vw, 420px);
-        color: #f4f4f4;
-        font-family: "Londrina Solid", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-        font-size: clamp(3.7rem, 5.68vw, 7.1rem);
-        font-style: italic;
-        font-weight: 900;
-        line-height: 1;
-        text-align: center;
-        text-shadow:
-          0 4px 0 rgba(0, 0, 0, 0.3),
-          0 12px 18px rgba(0, 0, 0, 0.34);
+        padding: 0 1rem;
+      }
+
+      .sponsor-logo {
+        display: block;
+        filter: drop-shadow(-6px 8px 6px rgba(0, 0, 0, 0.42));
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+
+      .sponsor-logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .sponsor-logo:hover,
+      .sponsor-logo:focus-visible {
+        transform: translateY(-6px);
+        filter: drop-shadow(-6px 12px 10px rgba(0, 0, 0, 0.5));
+      }
+
+      .sponsor-spacex {
+        width: clamp(240px, 32vw, 460px);
+      }
+
+      .sponsor-marshall {
+        width: clamp(170px, 22vw, 320px);
       }
 
       .faq-section {
@@ -1622,10 +1659,18 @@
           width: min(92vw, 760px);
         }
 
-        .sponsors-coming-soon {
+        .sponsors-logos {
           width: min(88vw, 620px);
-          min-height: clamp(120px, 32vw, 220px);
-          font-size: clamp(3rem, 12vw, 4.6rem);
+          min-height: 0;
+          gap: clamp(2rem, 9vw, 3.25rem);
+        }
+
+        .sponsor-spacex {
+          width: min(72vw, 300px);
+        }
+
+        .sponsor-marshall {
+          width: min(52vw, 215px);
         }
 
         .section-title {
@@ -1674,6 +1719,15 @@
       @media (prefers-reduced-motion: reduce) {
         :global(html) {
           scroll-behavior: auto;
+        }
+
+        .sponsor-logo {
+          transition: none;
+        }
+
+        .sponsor-logo:hover,
+        .sponsor-logo:focus-visible {
+          transform: none;
         }
 
         .hero-layer,
